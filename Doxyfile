@@ -10,7 +10,7 @@ PROJECT_BRIEF          = "Описание моего проекта"
 INPUT                  = src
 
 # Указывает папку для генерации документации
-OUTPUT_DIRECTORY       = docs
+OUTPUT_DIRECTORY       = 
 
 # Указывает, что не нужно обрабатывать файлы из node_modules
 EXCLUDE                = node_modules
