@@ -16,8 +16,11 @@ jobs:
     - name: Set up Doxygen
       run: sudo apt-get install -y doxygen
 
+    - name: Set ip Graphviz
+      run: sudo apt-get install -y graphviz
+
     - name: Generate Doxygen documentation
-      run: doxygen Doxyfile
+      run: doxygen 
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
