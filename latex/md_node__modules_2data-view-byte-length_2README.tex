@@ -1,0 +1,23 @@
+\chapter{data-\/view-\/byte-\/length \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/data-\/view-\/byte-\/length"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/ljharb/data-\/view-\/byte-\/length.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2data-view-byte-length_2README}{}\label{md_node__modules_2data-view-byte-length_2README}\index{data-\/view-\/byte-\/length $<$sup$>$$<$a href="{}https://npmjs.org/package/data-\/view-\/byte-\/length"{} $>$$<$img src="{}https://versionbadg.es/ljharb/data-\/view-\/byte-\/length.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{data-\/view-\/byte-\/length $<$sup$>$$<$a href=""https://npmjs.org/package/data-\/view-\/byte-\/length"" $>$$<$img src=""https://versionbadg.es/ljharb/data-\/view-\/byte-\/length.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2data-view-byte-length_2README_autotoc_md9158}%
+\Hypertarget{md_node__modules_2data-view-byte-length_2README_autotoc_md9158}%
+ \href{https://github.com/ljharb/data-view-byte-length/actions}{\texttt{ }} \href{https://app.codecov.io/gh/ljharb/data-view-byte-length/}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=data-view-byte-length}{\texttt{ }}
+
+\href{https://npmjs.org/package/data-view-byte-length}{\texttt{ }}
+
+Get the {\ttfamily byte\+Length} out of a Data\+View, robustly.
+
+This will work in node \texorpdfstring{$<$}{<}= 0.\+10 and \texorpdfstring{$<$}{<} 0.\+11.\+4, where there\textquotesingle{}s no prototype accessor, only a nonconfigurable own property. It will also work in modern engines where {\ttfamily Data\+View.\+prototype.\+byte\+Length} has been deleted after this module has loaded.\hypertarget{md_node__modules_2data-view-byte-length_2README_autotoc_md9159}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2data-view-byte-length_2README_autotoc_md9159}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ dataViewByteLength\ =\ require('data-\/view-\/byte-\/length');}
+\DoxyCodeLine{const\ assert\ =\ require('assert');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ ab\ =\ new\ ArrayBuffer(42);}
+\DoxyCodeLine{const\ dv\ =\ new\ DataView(ab);}
+\DoxyCodeLine{assert.equal(dataViewByteLength(dv),\ 42);}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2data-view-byte-length_2README_autotoc_md9160}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2data-view-byte-length_2README_autotoc_md9160}
+Simply clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test} 

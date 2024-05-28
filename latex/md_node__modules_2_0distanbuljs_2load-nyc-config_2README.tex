@@ -1,0 +1,48 @@
+\chapter{@istanbuljs/load-\/nyc-\/config}
+\hypertarget{md_node__modules_2_0distanbuljs_2load-nyc-config_2README}{}\label{md_node__modules_2_0distanbuljs_2load-nyc-config_2README}\index{"@istanbuljs/load-\/nyc-\/config@{"@istanbuljs/load-\/nyc-\/config}}
+\label{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1234}%
+\Hypertarget{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1234}%
+ The utility function which NYC uses to load configuration. This can be used by outside programs to calculate the configuration. Command-\/line arguments are not considered by this function.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ \{loadNycConfig\}\ =\ require('@istanbuljs/load-\/nyc-\/config');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ \{}
+\DoxyCodeLine{\ \ console.log(await\ loadNycConfig());}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1235}{}\doxysection{\texorpdfstring{load\+Nyc\+Config(\mbox{[}options\mbox{]})}{loadNycConfig([options])}}\label{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1235}
+\hypertarget{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1236}{}\doxysubsection{\texorpdfstring{options.\+cwd}{options.cwd}}\label{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1236}
+Type\+: {\ttfamily string} Default\+: {\ttfamily cwd} from parent nyc process or {\ttfamily process.\+cwd()}\hypertarget{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1237}{}\doxysubsection{\texorpdfstring{options.\+nycrc\+Path}{options.nycrcPath}}\label{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1237}
+Type\+: {\ttfamily string} Default\+: {\ttfamily undefined}
+
+Name of the file containing nyc configuration. This can be a relative or absolute path. Relative paths can exist at {\ttfamily options.\+cwd} or any parent directory. If an nycrc is specified but cannot be found an exception is thrown.
+
+If no nycrc option is provided the default priority of config files are\+:
+
+
+\begin{DoxyItemize}
+\item .nycrc
+\item .nycrc.\+json
+\item .nycrc.\+yml
+\item .nycrc.\+yaml
+\item nyc.\+config.\+js
+\item nyc.\+config.\+cjs
+\item nyc.\+config.\+mjs
+\end{DoxyItemize}\hypertarget{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1238}{}\doxysection{\texorpdfstring{Configuration merging}{Configuration merging}}\label{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1238}
+Configuration is first loaded from {\ttfamily package.\+json} if found, this serves as the package defaults. These options can be overridden by an nycrc if found. Arrays are not merged, so if {\ttfamily package.\+json} sets {\ttfamily "{}require"{}\+: \mbox{[}"{}@babel/register"{}\mbox{]}} and {\ttfamily .nycrc} sets {\ttfamily "{}require"{}\+: \mbox{[}"{}esm"{}\mbox{]}} the effective require setting will only include {\ttfamily "{}esm"{}}.\hypertarget{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1239}{}\doxysection{\texorpdfstring{is\+Loading}{isLoading}}\label{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1239}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ \{isLoading\}\ =\ require('@istanbuljs/load-\/nyc-\/config');}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(isLoading());}
+
+\end{DoxyCode}
+
+
+In some cases source transformation hooks can get installed before the configuration is loaded. This allows hooks to ignore source loads that occur during configuration load.\hypertarget{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1240}{}\doxysection{\texorpdfstring{$<$tt$>$@istanbuljs/load-\/nyc-\/config$<$/tt$>$ for enterprise}{<tt>@istanbuljs/load-nyc-config</tt> for enterprise}}\label{md_node__modules_2_0distanbuljs_2load-nyc-config_2README_autotoc_md1240}
+Available as part of the Tidelift Subscription.
+
+The maintainers of {\ttfamily @istanbuljs/load-\/nyc-\/config} and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. \href{https://tidelift.com/subscription/pkg/npm-istanbuljs-load-nyc-config?utm_source=npm-istanbuljs-load-nyc-config&utm_medium=referral&utm_campaign=enterprise}{\texttt{ Learn more.}} 

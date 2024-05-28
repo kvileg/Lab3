@@ -1,0 +1,64 @@
+\chapter{find-\/up \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/find-\/up"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/find-\/up.\+svg?branch=master"{} alt="{}\+Build Status\+: Linux and mac\+OS"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}a href="{}https\+://ci.\+appveyor.\+com/project/sindresorhus/find-\/up/branch/master"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://ci.\+appveyor.\+com/api/projects/status/l0cyjmvh5lq72vq2/branch/master?svg=true"{} alt="{}\+Build Status\+: Windows"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme}{}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme}\index{find-\/up $<$a href="{}https://travis-\/ci.org/sindresorhus/find-\/up"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/find-\/up.svg?branch=master"{} alt="{}Build Status: Linux and macOS"{}/$>$$<$/a$>$ $<$a href="{}https://ci.appveyor.com/project/sindresorhus/find-\/up/branch/master"{} $>$$<$img src="{}https://ci.appveyor.com/api/projects/status/l0cyjmvh5lq72vq2/branch/master?svg=true"{} alt="{}Build Status: Windows"{}/$>$$<$/a$>$@{find-\/up $<$a href=""https://travis-\/ci.org/sindresorhus/find-\/up"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/find-\/up.svg?branch=master"" alt=""Build Status: Linux and macOS""/$>$$<$/a$>$ $<$a href=""https://ci.appveyor.com/project/sindresorhus/find-\/up/branch/master"" $>$$<$img src=""https://ci.appveyor.com/api/projects/status/l0cyjmvh5lq72vq2/branch/master?svg=true"" alt=""Build Status: Windows""/$>$$<$/a$>$}}
+\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20592}%
+\Hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20592}%
+ \begin{quote}
+Find a file or directory by walking up parent directories \end{quote}
+\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20593}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20593}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ find-\/up}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20594}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20594}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{/}
+\DoxyCodeLine{└──\ Users}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ └──\ sindresorhus}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ├──\ unicorn.png}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ └──\ foo}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ └──\ bar}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ├──\ baz}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ └──\ example.js}
+
+\end{DoxyCode}
+
+
+{\ttfamily example.\+js}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ findUp\ =\ require('find-\/up');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ console.log(await\ findUp('unicorn.png'));}
+\DoxyCodeLine{\ \ \ \ //=>\ '/Users/sindresorhus/unicorn.png'}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ console.log(await\ findUp(['rainbow.png',\ 'unicorn.png']));}
+\DoxyCodeLine{\ \ \ \ //=>\ '/Users/sindresorhus/unicorn.png'}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20595}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20595}
+\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20596}{}\doxysubsection{\texorpdfstring{find\+Up(filename, \mbox{[}options\mbox{]})}{findUp(filename, [options])}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20596}
+Returns a {\ttfamily Promise} for either the filepath or {\ttfamily null} if it couldn\textquotesingle{}t be found.\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20597}{}\doxysubsection{\texorpdfstring{find\+Up(\mbox{[}filename\+A, filename\+B\mbox{]}, \mbox{[}options\mbox{]})}{findUp([filenameA, filenameB], [options])}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20597}
+Returns a {\ttfamily Promise} for either the first filepath found (by respecting the order) or {\ttfamily null} if none could be found.\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20598}{}\doxysubsection{\texorpdfstring{find\+Up.\+sync(filename, \mbox{[}options\mbox{]})}{findUp.sync(filename, [options])}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20598}
+Returns a filepath or {\ttfamily null}.\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20599}{}\doxysubsection{\texorpdfstring{find\+Up.\+sync(\mbox{[}filename\+A, filename\+B\mbox{]}, \mbox{[}options\mbox{]})}{findUp.sync([filenameA, filenameB], [options])}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20599}
+Returns the first filepath found (by respecting the order) or {\ttfamily null}.\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20600}{}\doxysubsubsection{\texorpdfstring{filename}{filename}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20600}
+Type\+: {\ttfamily string}
+
+Filename of the file to find.\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20601}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20601}
+Type\+: {\ttfamily Object}\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20602}{}\doxyparagraph{\texorpdfstring{cwd}{cwd}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20602}
+Type\+: {\ttfamily string}~\newline
+ Default\+: {\ttfamily process.\+cwd()}
+
+Directory to start from.\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20603}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20603}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/find-up-cli}{\texttt{ find-\/up-\/cli}} -\/ CLI for this module
+\item \href{https://github.com/sindresorhus/pkg-up}{\texttt{ pkg-\/up}} -\/ Find the closest package.\+json file
+\item \href{https://github.com/sindresorhus/pkg-dir}{\texttt{ pkg-\/dir}} -\/ Find the root directory of an npm package
+\item \href{https://github.com/sindresorhus/resolve-from}{\texttt{ resolve-\/from}} -\/ Resolve the path of a module like {\ttfamily require.\+resolve()} but from a given path
+\end{DoxyItemize}\hypertarget{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20604}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2pkg-up_2node__modules_2find-up_2readme_autotoc_md20604}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

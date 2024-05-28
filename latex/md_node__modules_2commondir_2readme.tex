@@ -1,0 +1,44 @@
+\chapter{commondir}
+\hypertarget{md_node__modules_2commondir_2readme}{}\label{md_node__modules_2commondir_2readme}\index{commondir@{commondir}}
+\label{md_node__modules_2commondir_2readme_autotoc_md7963}%
+\Hypertarget{md_node__modules_2commondir_2readme_autotoc_md7963}%
+ compute the closest common parent directory among an array of directories\hypertarget{md_node__modules_2commondir_2readme_autotoc_md7964}{}\doxysection{\texorpdfstring{example}{example}}\label{md_node__modules_2commondir_2readme_autotoc_md7964}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{var\ commondir\ =\ require('commondir');}
+\DoxyCodeLine{var\ dir\ =\ commondir(process.argv.slice(2))}
+\DoxyCodeLine{console.log(dir);}
+
+\end{DoxyCode}
+
+
+output\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ node\ dir.js\ /x/y/z\ /x/y\ /x/y/w/q}
+\DoxyCodeLine{/x/y}
+\DoxyCodeLine{\$\ node\ ../baz\ ../../foo/quux\ ./bizzy}
+\DoxyCodeLine{/foo}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2commondir_2readme_autotoc_md7965}{}\doxysection{\texorpdfstring{methods}{methods}}\label{md_node__modules_2commondir_2readme_autotoc_md7965}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{var\ commondir\ =\ require('commondir');}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2commondir_2readme_autotoc_md7966}{}\doxysubsection{\texorpdfstring{commondir(absolute\+Paths)}{commondir(absolutePaths)}}\label{md_node__modules_2commondir_2readme_autotoc_md7966}
+Compute the closest common parent directory for an array {\ttfamily absolute\+Paths}.\hypertarget{md_node__modules_2commondir_2readme_autotoc_md7967}{}\doxysubsection{\texorpdfstring{commondir(basedir, relative\+Paths)}{commondir(basedir, relativePaths)}}\label{md_node__modules_2commondir_2readme_autotoc_md7967}
+Compute the closest common parent directory for an array {\ttfamily relative\+Paths} which will be resolved for each {\ttfamily dir} in {\ttfamily relative\+Paths} according to\+: {\ttfamily path.\+resolve(basedir, dir)}.\hypertarget{md_node__modules_2commondir_2readme_autotoc_md7968}{}\doxysection{\texorpdfstring{install}{install}}\label{md_node__modules_2commondir_2readme_autotoc_md7968}
+With \href{https://npmjs.org}{\texttt{ npm}} do\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ commondir}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2commondir_2readme_autotoc_md7969}{}\doxysection{\texorpdfstring{license}{license}}\label{md_node__modules_2commondir_2readme_autotoc_md7969}
+MIT 

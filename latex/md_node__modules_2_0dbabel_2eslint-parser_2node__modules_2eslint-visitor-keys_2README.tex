@@ -1,0 +1,89 @@
+\chapter{eslint-\/visitor-\/keys}
+\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README}{}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README}\index{eslint-\/visitor-\/keys@{eslint-\/visitor-\/keys}}
+\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md80}%
+\Hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md80}%
+ \href{https://www.npmjs.com/package/eslint-visitor-keys}{\texttt{ }} \href{http://www.npmtrends.com/eslint-visitor-keys}{\texttt{ }} \href{https://travis-ci.org/eslint/eslint-visitor-keys}{\texttt{ }} \href{https://david-dm.org/eslint/eslint-visitor-keys}{\texttt{ }}
+
+Constants and utilities about visitor keys to traverse AST.\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md81}{}\doxysection{\texorpdfstring{💿 Installation}{💿 Installation}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md81}
+Use \href{https://www.npmjs.com/}{\texttt{ npm}} to install.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ eslint-\/visitor-\/keys}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md82}{}\doxysubsection{\texorpdfstring{Requirements}{Requirements}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md82}
+
+\begin{DoxyItemize}
+\item \href{https://nodejs.org/en/}{\texttt{ Node.\+js}} 10.\+0.\+0 or later.
+\end{DoxyItemize}\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md83}{}\doxysection{\texorpdfstring{📖 Usage}{📖 Usage}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md83}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ evk\ =\ require("{}eslint-\/visitor-\/keys"{})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md84}{}\doxysubsection{\texorpdfstring{evk.\+KEYS}{evk.KEYS}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md84}
+\begin{quote}
+type\+: {\ttfamily \{ \mbox{[}type\+: string\mbox{]}\+: string\mbox{[}\mbox{]} \texorpdfstring{$\vert$}{|} undefined \}} \end{quote}
+Visitor keys. This keys are frozen.
+
+This is an object. Keys are the type of \href{https://github.com/estree/estree}{\texttt{ ESTree}} nodes. Their values are an array of property names which have child nodes.
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{console.log(evk.KEYS.AssignmentExpression)\ //\ →\ ["{}left"{},\ "{}right"{}]}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md85}{}\doxysubsection{\texorpdfstring{evk.\+get\+Keys(node)}{evk.getKeys(node)}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md85}
+\begin{quote}
+type\+: {\ttfamily (node\+: object) =\texorpdfstring{$>$}{>} string\mbox{[}\mbox{]}} \end{quote}
+Get the visitor keys of a given AST node.
+
+This is similar to {\ttfamily Object.\+keys(node)} of ES Standard, but some keys are excluded\+: {\ttfamily parent}, {\ttfamily leading\+Comments}, {\ttfamily trailing\+Comments}, and names which start with {\ttfamily \+\_\+}.
+
+This will be used to traverse unknown nodes.
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ node\ =\ \{}
+\DoxyCodeLine{\ \ \ \ type:\ "{}AssignmentExpression"{},}
+\DoxyCodeLine{\ \ \ \ left:\ \{\ type:\ "{}Identifier"{},\ name:\ "{}foo"{}\ \},}
+\DoxyCodeLine{\ \ \ \ right:\ \{\ type:\ "{}Literal"{},\ value:\ 0\ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{console.log(evk.getKeys(node))\ //\ →\ ["{}type"{},\ "{}left"{},\ "{}right"{}]}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md86}{}\doxysubsection{\texorpdfstring{evk.\+union\+With(additional\+Keys)}{evk.unionWith(additionalKeys)}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md86}
+\begin{quote}
+type\+: {\ttfamily (additional\+Keys\+: object) =\texorpdfstring{$>$}{>} \{ \mbox{[}type\+: string\mbox{]}\+: string\mbox{[}\mbox{]} \texorpdfstring{$\vert$}{|} undefined \}} \end{quote}
+Make the union set with {\ttfamily evk.\+KEYS} and the given keys.
+
+
+\begin{DoxyItemize}
+\item The order of keys is, {\ttfamily additional\+Keys} is at first, then {\ttfamily evk.\+KEYS} is concatenated after that.
+\item It removes duplicated keys as keeping the first one.
+\end{DoxyItemize}
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{console.log(evk.unionWith(\{}
+\DoxyCodeLine{\ \ \ \ MethodDefinition:\ ["{}decorators"{}]}
+\DoxyCodeLine{\}))\ //\ →\ \{\ ...,\ MethodDefinition:\ ["{}decorators"{},\ "{}key"{},\ "{}value"{}],\ ...\ \}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md87}{}\doxysection{\texorpdfstring{📰 Change log}{📰 Change log}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md87}
+See \href{https://github.com/eslint/eslint-visitor-keys/releases}{\texttt{ Git\+Hub releases}}.\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md88}{}\doxysection{\texorpdfstring{🍻 Contributing}{🍻 Contributing}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md88}
+Welcome. See \href{https://eslint.org/docs/developer-guide/contributing/}{\texttt{ ESLint contribution guidelines}}.\hypertarget{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md89}{}\doxysubsection{\texorpdfstring{Development commands}{Development commands}}\label{md_node__modules_2_0dbabel_2eslint-parser_2node__modules_2eslint-visitor-keys_2README_autotoc_md89}
+
+\begin{DoxyItemize}
+\item {\ttfamily npm test} runs tests and measures code coverage.
+\item {\ttfamily npm run lint} checks source codes with ESLint.
+\item {\ttfamily npm run coverage} opens the code coverage report of the previous test with your default browser.
+\item {\ttfamily npm run release} publishes this package to \href{https://www.npmjs.com/}{\texttt{ npm}} registory. 
+\end{DoxyItemize}

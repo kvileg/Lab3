@@ -1,0 +1,34 @@
+\chapter{svg-\/parser}
+\hypertarget{md_node__modules_2svg-parser_2README}{}\label{md_node__modules_2svg-parser_2README}\index{svg-\/parser@{svg-\/parser}}
+\label{md_node__modules_2svg-parser_2README_autotoc_md27209}%
+\Hypertarget{md_node__modules_2svg-parser_2README_autotoc_md27209}%
+ Take a string representing an SVG document or fragment, turn it into \href{https://github.com/syntax-tree/hast}{\texttt{ HAST}} Java\+Script object.\hypertarget{md_node__modules_2svg-parser_2README_autotoc_md27210}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2svg-parser_2README_autotoc_md27210}
+{\ttfamily npm install svg-\/parser}, or grab it from \href{https://npmcdn.com/svg-parser}{\texttt{ npmcdn.\+com/svg-\/parser}}.\hypertarget{md_node__modules_2svg-parser_2README_autotoc_md27211}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2svg-parser_2README_autotoc_md27211}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ parse\ \}\ from\ 'svg-\/parser';}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ parsed\ =\ parse(\ \`{}}
+\DoxyCodeLine{\ \ \ \ <svg\ viewBox='0\ 0\ 100\ 100'>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <!-\/-\/\ stuff\ goes\ here...\ -\/-\/>}
+\DoxyCodeLine{\ \ \ \ </svg>}
+\DoxyCodeLine{\`{}\ );}
+\DoxyCodeLine{/*}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ type:\ 'root',}
+\DoxyCodeLine{\ \ children:\ [}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ type:\ 'element',}
+\DoxyCodeLine{\ \ \ \ \ \ tagName:\ 'svg',}
+\DoxyCodeLine{\ \ \ \ \ \ properties:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ viewBox:\ '0\ 0\ 100\ 100'}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ children:\ [...]}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ ]}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{*/}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2svg-parser_2README_autotoc_md27212}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2svg-parser_2README_autotoc_md27212}
+MIT 

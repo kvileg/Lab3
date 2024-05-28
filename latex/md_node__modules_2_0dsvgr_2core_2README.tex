@@ -1,0 +1,55 @@
+\chapter{@svgr/core}
+\hypertarget{md_node__modules_2_0dsvgr_2core_2README}{}\label{md_node__modules_2_0dsvgr_2core_2README}\index{"@svgr/core@{"@svgr/core}}
+\label{md_node__modules_2_0dsvgr_2core_2README_autotoc_md2740}%
+\Hypertarget{md_node__modules_2_0dsvgr_2core_2README_autotoc_md2740}%
+ \href{https://travis-ci.org/smooth-code/svgr}{\texttt{ }} \href{https://www.npmjs.com/package/@svgr/core}{\texttt{ }} \href{https://github.com/smooth-code/svgr/blob/master/LICENSE}{\texttt{ }}
+
+Node API of SVGR.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ @svgr/core}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dsvgr_2core_2README_autotoc_md2741}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2_0dsvgr_2core_2README_autotoc_md2741}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ svgr\ from\ '@svgr/core'}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ svgCode\ =\ \`{}}
+\DoxyCodeLine{<svg\ xmlns="{}http://www.w3.org/2000/svg"{}}
+\DoxyCodeLine{\ \ xmlns:xlink="{}http://www.w3.org/1999/xlink"{}>}
+\DoxyCodeLine{\ \ <rect\ x="{}10"{}\ y="{}10"{}\ height="{}100"{}\ width="{}100"{}}
+\DoxyCodeLine{\ \ \ \ style="{}stroke:\#ff0000;\ fill:\ \#0000ff"{}/>}
+\DoxyCodeLine{</svg>}
+\DoxyCodeLine{\`{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{svgr(svgCode,\ \{\ icon:\ true\ \},\ \{\ componentName:\ 'MyComponent'\ \}).then(}
+\DoxyCodeLine{\ \ (jsCode)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ console.log(jsCode)}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+
+
+Use {\ttfamily svgr.\+sync(code, config, state)} if you would like to use sync version.\hypertarget{md_node__modules_2_0dsvgr_2core_2README_autotoc_md2742}{}\doxysubsection{\texorpdfstring{Plugins}{Plugins}}\label{md_node__modules_2_0dsvgr_2core_2README_autotoc_md2742}
+By default {\ttfamily @svgr/core} doesn\textquotesingle{}t include {\ttfamily svgo} and {\ttfamily prettier} plugins, if you want them, you have to install them and include them in config.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{svgr(svgCode,\ \{}
+\DoxyCodeLine{\ \ plugins:\ ['@svgr/plugin-\/svgo',\ '@svgr/plugin-\/jsx',\ '@svgr/plugin-\/prettier'],}
+\DoxyCodeLine{\}).then((jsCode)\ =>\ \{}
+\DoxyCodeLine{\ \ console.log(jsCode)}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dsvgr_2core_2README_autotoc_md2743}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2_0dsvgr_2core_2README_autotoc_md2743}
+MIT
+
+
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+ 

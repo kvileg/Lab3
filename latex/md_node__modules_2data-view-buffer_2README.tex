@@ -1,0 +1,23 @@
+\chapter{data-\/view-\/buffer \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/data-\/view-\/buffer"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/ljharb/data-\/view-\/buffer.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2data-view-buffer_2README}{}\label{md_node__modules_2data-view-buffer_2README}\index{data-\/view-\/buffer $<$sup$>$$<$a href="{}https://npmjs.org/package/data-\/view-\/buffer"{} $>$$<$img src="{}https://versionbadg.es/ljharb/data-\/view-\/buffer.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{data-\/view-\/buffer $<$sup$>$$<$a href=""https://npmjs.org/package/data-\/view-\/buffer"" $>$$<$img src=""https://versionbadg.es/ljharb/data-\/view-\/buffer.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2data-view-buffer_2README_autotoc_md9150}%
+\Hypertarget{md_node__modules_2data-view-buffer_2README_autotoc_md9150}%
+ \href{https://github.com/ljharb/data-view-buffer/actions}{\texttt{ }} \href{https://app.codecov.io/gh/ljharb/data-view-buffer/}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=data-view-buffer}{\texttt{ }}
+
+\href{https://npmjs.org/package/data-view-buffer}{\texttt{ }}
+
+Get the Array\+Buffer out of a Data\+View, robustly.
+
+This will work in node \texorpdfstring{$<$}{<}= 0.\+10 and \texorpdfstring{$<$}{<} 0.\+11.\+4, where there\textquotesingle{}s no prototype accessor, only a nonconfigurable own property. It will also work in modern engines where {\ttfamily Data\+View.\+prototype.\+buffer} has been deleted after this module has loaded.\hypertarget{md_node__modules_2data-view-buffer_2README_autotoc_md9151}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2data-view-buffer_2README_autotoc_md9151}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ dataViewBuffer\ =\ require('data-\/view-\/buffer');}
+\DoxyCodeLine{const\ assert\ =\ require('assert');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ ab\ =\ new\ ArrayBuffer(0);}
+\DoxyCodeLine{const\ dv\ =\ new\ DataView(ab);}
+\DoxyCodeLine{assert.equal(dataViewBuffer(dv),\ ab);}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2data-view-buffer_2README_autotoc_md9152}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2data-view-buffer_2README_autotoc_md9152}
+Simply clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test} 

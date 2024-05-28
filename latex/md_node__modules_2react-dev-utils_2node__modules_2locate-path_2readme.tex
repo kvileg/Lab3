@@ -1,0 +1,74 @@
+\chapter{locate-\/path \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+com/github/sindresorhus/locate-\/path"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+com/sindresorhus/locate-\/path.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme}{}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme}\index{locate-\/path $<$a href="{}https://travis-\/ci.com/github/sindresorhus/locate-\/path"{} $>$$<$img src="{}https://travis-\/ci.com/sindresorhus/locate-\/path.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{locate-\/path $<$a href=""https://travis-\/ci.com/github/sindresorhus/locate-\/path"" $>$$<$img src=""https://travis-\/ci.com/sindresorhus/locate-\/path.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22903}%
+\Hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22903}%
+ \begin{quote}
+Get the first path that exists on disk of multiple paths \end{quote}
+\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22904}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22904}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ locate-\/path}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22905}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22905}
+Here we find the first file that exists on disk, in array order.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ locatePath\ =\ require('locate-\/path');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ files\ =\ [}
+\DoxyCodeLine{\ \ \ \ 'unicorn.png',}
+\DoxyCodeLine{\ \ \ \ 'rainbow.png',\ //\ Only\ this\ one\ actually\ exists\ on\ disk}
+\DoxyCodeLine{\ \ \ \ 'pony.png'}
+\DoxyCodeLine{];}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ console(await\ locatePath(files));}
+\DoxyCodeLine{\ \ \ \ //=>\ 'rainbow'}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22906}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22906}
+\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22907}{}\doxysubsection{\texorpdfstring{locate\+Path(paths, options?)}{locatePath(paths, options?)}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22907}
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}string\texorpdfstring{$>$}{>}} for the first path that exists or {\ttfamily undefined} if none exists.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22908}{}\doxysubsubsection{\texorpdfstring{paths}{paths}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22908}
+Type\+: {\ttfamily Iterable\texorpdfstring{$<$}{<}string\texorpdfstring{$>$}{>}}
+
+Paths to check.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22909}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22909}
+Type\+: {\ttfamily object}\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22910}{}\doxyparagraph{\texorpdfstring{concurrency}{concurrency}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22910}
+Type\+: {\ttfamily number}\textbackslash{} Default\+: {\ttfamily Infinity}\textbackslash{} Minimum\+: {\ttfamily 1}
+
+Number of concurrently pending promises.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22911}{}\doxyparagraph{\texorpdfstring{preserve\+Order}{preserveOrder}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22911}
+Type\+: {\ttfamily boolean}\textbackslash{} Default\+: {\ttfamily true}
+
+Preserve {\ttfamily paths} order when searching.
+
+Disable this to improve performance if you don\textquotesingle{}t care about the order.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22912}{}\doxyparagraph{\texorpdfstring{cwd}{cwd}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22912}
+Type\+: {\ttfamily string}\textbackslash{} Default\+: {\ttfamily process.\+cwd()}
+
+Current working directory.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22913}{}\doxyparagraph{\texorpdfstring{type}{type}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22913}
+Type\+: {\ttfamily string}\textbackslash{} Default\+: `\textquotesingle{}file'{\ttfamily \textbackslash{} Values\+:}\textquotesingle{}file\textquotesingle{} \texorpdfstring{$\vert$}{|} \textquotesingle{}directory\textquotesingle{}\`{}
+
+The type of paths that can match.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22914}{}\doxyparagraph{\texorpdfstring{allow\+Symlinks}{allowSymlinks}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22914}
+Type\+: {\ttfamily boolean}\textbackslash{} Default\+: {\ttfamily true}
+
+Allow symbolic links to match if they point to the chosen path type.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22915}{}\doxysubsection{\texorpdfstring{locate\+Path.\+sync(paths, options?)}{locatePath.sync(paths, options?)}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22915}
+Returns the first path that exists or {\ttfamily undefined} if none exists.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22916}{}\doxysubsubsection{\texorpdfstring{paths}{paths}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22916}
+Type\+: {\ttfamily Iterable\texorpdfstring{$<$}{<}string\texorpdfstring{$>$}{>}}
+
+Paths to check.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22917}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22917}
+Type\+: {\ttfamily object}\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22918}{}\doxyparagraph{\texorpdfstring{cwd}{cwd}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22918}
+Same as above.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22919}{}\doxyparagraph{\texorpdfstring{type}{type}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22919}
+Same as above.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22920}{}\doxyparagraph{\texorpdfstring{allow\+Symlinks}{allowSymlinks}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22920}
+Same as above.\hypertarget{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22921}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md_node__modules_2react-dev-utils_2node__modules_2locate-path_2readme_autotoc_md22921}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/path-exists}{\texttt{ path-\/exists}} -\/ Check if a path exists
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+ {\bfseries{ \href{https://tidelift.com/subscription/pkg/npm-locate-path?utm_source=npm-locate-path&utm_medium=referral&utm_campaign=readme}{\texttt{ Get professional support for this package with a Tidelift subscription}} }} ~\newline
+ \textsubscript{ Tidelift helps make open source sustainable for maintainers while giving companies~\newline
+assurances about security, maintenance, and licensing for their dependencies. }  

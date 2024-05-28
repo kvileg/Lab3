@@ -1,0 +1,49 @@
+\chapter{indent-\/string \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/indent-\/string"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/indent-\/string.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2indent-string_2readme}{}\label{md_node__modules_2indent-string_2readme}\index{indent-\/string $<$a href="{}https://travis-\/ci.org/sindresorhus/indent-\/string"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/indent-\/string.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{indent-\/string $<$a href=""https://travis-\/ci.org/sindresorhus/indent-\/string"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/indent-\/string.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2indent-string_2readme_autotoc_md15467}%
+\Hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15467}%
+ \begin{quote}
+Indent each line in a string \end{quote}
+\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15468}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2indent-string_2readme_autotoc_md15468}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ indent-\/string}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15469}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2indent-string_2readme_autotoc_md15469}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ indentString\ =\ require('indent-\/string');}
+\DoxyCodeLine{}
+\DoxyCodeLine{indentString('Unicorns\(\backslash\)nRainbows',\ 4);}
+\DoxyCodeLine{//=>\ '\ \ \ \ Unicorns\(\backslash\)n\ \ \ \ Rainbows'}
+\DoxyCodeLine{}
+\DoxyCodeLine{indentString('Unicorns\(\backslash\)nRainbows',\ 4,\ \{indent:\ '♥'\});}
+\DoxyCodeLine{//=>\ '♥♥♥♥Unicorns\(\backslash\)n♥♥♥♥Rainbows'}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15470}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2indent-string_2readme_autotoc_md15470}
+\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15471}{}\doxysubsection{\texorpdfstring{indent\+String(string, \mbox{[}count\mbox{]}, \mbox{[}options\mbox{]})}{indentString(string, [count], [options])}}\label{md_node__modules_2indent-string_2readme_autotoc_md15471}
+\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15472}{}\doxysubsubsection{\texorpdfstring{string}{string}}\label{md_node__modules_2indent-string_2readme_autotoc_md15472}
+Type\+: {\ttfamily string}
+
+The string to indent.\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15473}{}\doxysubsubsection{\texorpdfstring{count}{count}}\label{md_node__modules_2indent-string_2readme_autotoc_md15473}
+Type\+: {\ttfamily number}~\newline
+ Default\+: {\ttfamily 1}
+
+How many times you want {\ttfamily options.\+indent} repeated.\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15474}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md_node__modules_2indent-string_2readme_autotoc_md15474}
+Type\+: {\ttfamily object}\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15475}{}\doxyparagraph{\texorpdfstring{indent}{indent}}\label{md_node__modules_2indent-string_2readme_autotoc_md15475}
+Type\+: {\ttfamily string}~\newline
+ Default\+: `' \textquotesingle{}\`{}
+
+The string to use for the indent.\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15476}{}\doxyparagraph{\texorpdfstring{include\+Empty\+Lines}{includeEmptyLines}}\label{md_node__modules_2indent-string_2readme_autotoc_md15476}
+Type\+: {\ttfamily boolean}~\newline
+ Default\+: {\ttfamily false}
+
+Also indent empty lines.\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15477}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md_node__modules_2indent-string_2readme_autotoc_md15477}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/indent-string-cli}{\texttt{ indent-\/string-\/cli}} -\/ CLI for this module
+\item \href{https://github.com/sindresorhus/strip-indent}{\texttt{ strip-\/indent}} -\/ Strip leading whitespace from every line in a string
+\end{DoxyItemize}\hypertarget{md_node__modules_2indent-string_2readme_autotoc_md15478}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2indent-string_2readme_autotoc_md15478}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

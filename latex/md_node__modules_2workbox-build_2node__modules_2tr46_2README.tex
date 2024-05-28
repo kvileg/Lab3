@@ -1,0 +1,53 @@
+\chapter{tr46.\+js}
+\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README}{}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README}\index{tr46.js@{tr46.js}}
+\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30316}%
+\Hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30316}%
+ \begin{quote}
+An implementation of the \href{http://unicode.org/reports/tr46/}{\texttt{ Unicode TR46 specification}}. \end{quote}
+\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30317}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30317}
+\href{http://nodejs.org}{\texttt{ Node.\+js}} {\ttfamily \texorpdfstring{$>$}{>}= 6} is required. To install, type this at the command line\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ tr46}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30318}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30318}
+\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30319}{}\doxysubsection{\texorpdfstring{$<$tt$>$to\+ASCII(domain\+Name\mbox{[}, options\mbox{]})$<$/tt$>$}{<tt>toASCII(domainName[, options])</tt>}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30319}
+Converts a string of Unicode symbols to a case-\/folded Punycode string of ASCII symbols.
+
+Available options\+:
+\begin{DoxyItemize}
+\item \`{}check\+Bidi\`{}
+\item \`{}check\+Hyphens\`{}
+\item \`{}check\+Joiners\`{}
+\item \`{}processing\+Option\`{}
+\item \`{}use\+STD3\+ASCIIRules\`{}
+\item \`{}verify\+DNSLength\`{}
+\end{DoxyItemize}\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30320}{}\doxysubsection{\texorpdfstring{$<$tt$>$to\+Unicode(domain\+Name\mbox{[}, options\mbox{]})$<$/tt$>$}{<tt>toUnicode(domainName[, options])</tt>}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30320}
+Converts a case-\/folded Punycode string of ASCII symbols to a string of Unicode symbols.
+
+Available options\+:
+\begin{DoxyItemize}
+\item \`{}check\+Bidi\`{}
+\item \`{}check\+Hyphens\`{}
+\item \`{}check\+Joiners\`{}
+\item \`{}use\+STD3\+ASCIIRules\`{}
+\end{DoxyItemize}\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30321}{}\doxysection{\texorpdfstring{Options}{Options}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30321}
+\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30322}{}\doxysubsection{\texorpdfstring{$<$tt$>$check\+Bidi$<$/tt$>$}{<tt>checkBidi</tt>}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30322}
+Type\+: {\ttfamily Boolean} ~\newline
+ Default value\+: {\ttfamily false} ~\newline
+ When set to {\ttfamily true}, any bi-\/directional text within the input will be checked for validation.\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30323}{}\doxysubsection{\texorpdfstring{$<$tt$>$check\+Hyphens$<$/tt$>$}{<tt>checkHyphens</tt>}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30323}
+Type\+: {\ttfamily Boolean} ~\newline
+ Default value\+: {\ttfamily false} ~\newline
+ When set to {\ttfamily true}, the positions of any hyphen characters within the input will be checked for validation.\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30324}{}\doxysubsection{\texorpdfstring{$<$tt$>$check\+Joiners$<$/tt$>$}{<tt>checkJoiners</tt>}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30324}
+Type\+: {\ttfamily Boolean} ~\newline
+ Default value\+: {\ttfamily false} ~\newline
+ When set to {\ttfamily true}, any word joiner characters within the input will be checked for validation.\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30325}{}\doxysubsection{\texorpdfstring{$<$tt$>$processing\+Option$<$/tt$>$}{<tt>processingOption</tt>}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30325}
+Type\+: {\ttfamily String} ~\newline
+ Default value\+: {\ttfamily "{}nontransitional"{}} ~\newline
+ When set to {\ttfamily "{}transitional"{}}, symbols within the input will be validated according to the older IDNA2003 protocol. When set to {\ttfamily "{}nontransitional"{}}, the current IDNA2008 protocol will be used.\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30326}{}\doxysubsection{\texorpdfstring{$<$tt$>$use\+STD3\+ASCIIRules$<$/tt$>$}{<tt>useSTD3ASCIIRules</tt>}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30326}
+Type\+: {\ttfamily Boolean} ~\newline
+ Default value\+: {\ttfamily false} ~\newline
+ When set to {\ttfamily true}, input will be validated according to \href{http://unicode.org/reports/tr46/\#STD3_Rules}{\texttt{ STD3 Rules}}.\hypertarget{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30327}{}\doxysubsection{\texorpdfstring{$<$tt$>$verify\+DNSLength$<$/tt$>$}{<tt>verifyDNSLength</tt>}}\label{md_node__modules_2workbox-build_2node__modules_2tr46_2README_autotoc_md30327}
+Type\+: {\ttfamily Boolean} ~\newline
+ Default value\+: {\ttfamily false} ~\newline
+ When set to {\ttfamily true}, the length of each DNS label within the input will be checked for validation. 

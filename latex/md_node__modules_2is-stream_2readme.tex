@@ -1,0 +1,43 @@
+\chapter{is-\/stream}
+\hypertarget{md_node__modules_2is-stream_2readme}{}\label{md_node__modules_2is-stream_2readme}\index{is-\/stream@{is-\/stream}}
+\label{md_node__modules_2is-stream_2readme_autotoc_md15970}%
+\Hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15970}%
+ \begin{quote}
+Check if something is a \href{https://nodejs.org/api/stream.html}{\texttt{ Node.\+js stream}} \end{quote}
+\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15971}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2is-stream_2readme_autotoc_md15971}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ is-\/stream}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15972}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2is-stream_2readme_autotoc_md15972}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ fs\ =\ require('fs');}
+\DoxyCodeLine{const\ isStream\ =\ require('is-\/stream');}
+\DoxyCodeLine{}
+\DoxyCodeLine{isStream(fs.createReadStream('unicorn.png'));}
+\DoxyCodeLine{//=>\ true}
+\DoxyCodeLine{}
+\DoxyCodeLine{isStream(\{\});}
+\DoxyCodeLine{//=>\ false}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15973}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2is-stream_2readme_autotoc_md15973}
+\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15974}{}\doxysubsection{\texorpdfstring{is\+Stream(stream)}{isStream(stream)}}\label{md_node__modules_2is-stream_2readme_autotoc_md15974}
+Returns a {\ttfamily boolean} for whether it\textquotesingle{}s a \href{https://nodejs.org/api/stream.html\#stream_stream}{\texttt{ {\ttfamily Stream}}}.\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15975}{}\doxysubsubsection{\texorpdfstring{is\+Stream.\+writable(stream)}{isStream.writable(stream)}}\label{md_node__modules_2is-stream_2readme_autotoc_md15975}
+Returns a {\ttfamily boolean} for whether it\textquotesingle{}s a \href{https://nodejs.org/api/stream.html\#stream_class_stream_writable}{\texttt{ {\ttfamily stream.\+Writable}}}.\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15976}{}\doxysubsubsection{\texorpdfstring{is\+Stream.\+readable(stream)}{isStream.readable(stream)}}\label{md_node__modules_2is-stream_2readme_autotoc_md15976}
+Returns a {\ttfamily boolean} for whether it\textquotesingle{}s a \href{https://nodejs.org/api/stream.html\#stream_class_stream_readable}{\texttt{ {\ttfamily stream.\+Readable}}}.\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15977}{}\doxysubsubsection{\texorpdfstring{is\+Stream.\+duplex(stream)}{isStream.duplex(stream)}}\label{md_node__modules_2is-stream_2readme_autotoc_md15977}
+Returns a {\ttfamily boolean} for whether it\textquotesingle{}s a \href{https://nodejs.org/api/stream.html\#stream_class_stream_duplex}{\texttt{ {\ttfamily stream.\+Duplex}}}.\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15978}{}\doxysubsubsection{\texorpdfstring{is\+Stream.\+transform(stream)}{isStream.transform(stream)}}\label{md_node__modules_2is-stream_2readme_autotoc_md15978}
+Returns a {\ttfamily boolean} for whether it\textquotesingle{}s a \href{https://nodejs.org/api/stream.html\#stream_class_stream_transform}{\texttt{ {\ttfamily stream.\+Transform}}}.\hypertarget{md_node__modules_2is-stream_2readme_autotoc_md15979}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md_node__modules_2is-stream_2readme_autotoc_md15979}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/jamestalmage/is-file-stream}{\texttt{ is-\/file-\/stream}} -\/ Detect if a stream is a file stream
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+ {\bfseries{ \href{https://tidelift.com/subscription/pkg/npm-is-stream?utm_source=npm-is-stream&utm_medium=referral&utm_campaign=readme}{\texttt{ Get professional support for this package with a Tidelift subscription}} }} ~\newline
+ \textsubscript{ Tidelift helps make open source sustainable for maintainers while giving companies~\newline
+assurances about security, maintenance, and licensing for their dependencies. }  

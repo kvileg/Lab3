@@ -1,0 +1,81 @@
+\chapter{Post\+CSS Flexbugs Fixes \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/luisrudge/postcss-\/flexbugs-\/fixes"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/luisrudge/postcss-\/flexbugs-\/fixes.\+svg"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README}{}\label{md_node__modules_2postcss-flexbugs-fixes_2README}\index{PostCSS Flexbugs Fixes $<$a href="{}https://travis-\/ci.org/luisrudge/postcss-\/flexbugs-\/fixes"{} $>$$<$img src="{}https://travis-\/ci.org/luisrudge/postcss-\/flexbugs-\/fixes.svg"{} alt="{}Build Status"{}/$>$$<$/a$>$@{PostCSS Flexbugs Fixes $<$a href=""https://travis-\/ci.org/luisrudge/postcss-\/flexbugs-\/fixes"" $>$$<$img src=""https://travis-\/ci.org/luisrudge/postcss-\/flexbugs-\/fixes.svg"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21044}%
+\Hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21044}%
+\href{https://github.com/postcss/postcss}{\texttt{ Post\+CSS}} plugin This project tries to fix all of \href{https://github.com/philipwalton/flexbugs}{\texttt{ flexbug\textquotesingle{}s}} issues.\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21045}{}\doxysection{\texorpdfstring{bug $<$a href="{}https\+://github.\+com/philipwalton/flexbugs/blob/master/\+README.\+md\#4-\/flex-\/shorthand-\/declarations-\/with-\/unitless-\/flex-\/basis-\/values-\/are-\/ignored"{} $>$4$<$/a$>$}{bug <a href="https://github.com/philipwalton/flexbugs/blob/master/README.md\#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored" >4</a>}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21045}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21046}{}\doxysubsection{\texorpdfstring{Input}{Input}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21046}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.foo\ \{\ flex:\ 1;\ \}}
+\DoxyCodeLine{.bar\ \{\ flex:\ 1\ 1;\ \}}
+\DoxyCodeLine{.foz\ \{\ flex:\ 1\ 1\ 0;\ \}}
+\DoxyCodeLine{.baz\ \{\ flex:\ 1\ 1\ 0px;\ \}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21047}{}\doxysubsection{\texorpdfstring{Output}{Output}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21047}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.foo\ \{\ flex:\ 1\ 1;\ \}}
+\DoxyCodeLine{.bar\ \{\ flex:\ 1\ 1;\ \}}
+\DoxyCodeLine{.foz\ \{\ flex:\ 1\ 1;\ \}}
+\DoxyCodeLine{.baz\ \{\ flex:\ 1\ 1;\ \}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21048}{}\doxysection{\texorpdfstring{bug $<$a href="{}https\+://github.\+com/philipwalton/flexbugs/blob/master/\+README.\+md\#6-\/the-\/default-\/flex-\/value-\/has-\/changed"{} $>$6$<$/a$>$}{bug <a href="https://github.com/philipwalton/flexbugs/blob/master/README.md\#6-the-default-flex-value-has-changed" >6</a>}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21048}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21049}{}\doxysubsection{\texorpdfstring{Input}{Input}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21049}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.foo\ \{\ flex:\ 1;\ \}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21050}{}\doxysubsection{\texorpdfstring{Output}{Output}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21050}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.foo\ \{\ flex:\ 1\ 1\ 0\%;\ \}}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+This only fixes css classes that have the {\ttfamily flex} property set. To fix elements that are contained inside a flexbox container, use this global rule\+: \end{quote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{*\ \{}
+\DoxyCodeLine{\ \ \ \ flex-\/shrink:\ 1;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21051}{}\doxysection{\texorpdfstring{bug $<$a href="{}https\+://github.\+com/philipwalton/flexbugs/blob/master/\+README.\+md\#8-\/flex-\/basis-\/doesnt-\/support-\/calc"{} $>$8.\+1.\+a$<$/a$>$}{bug <a href="https://github.com/philipwalton/flexbugs/blob/master/README.md\#8-flex-basis-doesnt-support-calc" >8.1.a</a>}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21051}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21052}{}\doxysubsection{\texorpdfstring{Input}{Input}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21052}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.foo\ \{\ flex:\ 1\ 0\ calc(1vw\ -\/\ 1px);\ \}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21053}{}\doxysubsection{\texorpdfstring{Output}{Output}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21053}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.foo\ \{}
+\DoxyCodeLine{\ \ flex-\/grow:\ 1;}
+\DoxyCodeLine{\ \ flex-\/shrink:\ 0;}
+\DoxyCodeLine{\ \ flex-\/basis:\ calc(1vw\ -\/\ 1px);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21054}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2postcss-flexbugs-fixes_2README_autotoc_md21054}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{postcss([require('postcss-\/flexbugs-\/fixes')]);}
+
+\end{DoxyCode}
+
+
+You can also disable bugs individually, possible keys {\ttfamily bug4}, {\ttfamily bug6} and {\ttfamily bug8a}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ plugin\ =\ require('postcss-\/flexbugs-\/fixes');}
+\DoxyCodeLine{postcss([plugin(\{\ bug6:\ false\ \})]);}
+
+\end{DoxyCode}
+
+
+See \href{https://github.com/postcss/postcss}{\texttt{ Post\+CSS}} docs for examples for your environment. 

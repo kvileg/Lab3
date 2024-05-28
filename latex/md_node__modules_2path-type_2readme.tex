@@ -1,0 +1,47 @@
+\chapter{path-\/type \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/path-\/type"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/path-\/type.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2path-type_2readme}{}\label{md_node__modules_2path-type_2readme}\index{path-\/type $<$a href="{}https://travis-\/ci.org/sindresorhus/path-\/type"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/path-\/type.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{path-\/type $<$a href=""https://travis-\/ci.org/sindresorhus/path-\/type"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/path-\/type.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2path-type_2readme_autotoc_md20487}%
+\Hypertarget{md_node__modules_2path-type_2readme_autotoc_md20487}%
+ \begin{quote}
+Check if a path is a file, directory, or symlink \end{quote}
+\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20488}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2path-type_2readme_autotoc_md20488}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ path-\/type}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20489}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2path-type_2readme_autotoc_md20489}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ \{isFile\}\ =\ require('path-\/type');}
+\DoxyCodeLine{}
+\DoxyCodeLine{(async\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ console.log(await\ isFile('package.json'));}
+\DoxyCodeLine{\ \ \ \ //=>\ true}
+\DoxyCodeLine{\})();}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20490}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2path-type_2readme_autotoc_md20490}
+\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20491}{}\doxysubsection{\texorpdfstring{is\+File(path)}{isFile(path)}}\label{md_node__modules_2path-type_2readme_autotoc_md20491}
+Check whether the passed {\ttfamily path} is a file.
+
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}boolean\texorpdfstring{$>$}{>}}.\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20492}{}\doxysubsubsection{\texorpdfstring{path}{path}}\label{md_node__modules_2path-type_2readme_autotoc_md20492}
+Type\+: {\ttfamily string}
+
+The path to check.\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20493}{}\doxysubsection{\texorpdfstring{is\+Directory(path)}{isDirectory(path)}}\label{md_node__modules_2path-type_2readme_autotoc_md20493}
+Check whether the passed {\ttfamily path} is a directory.
+
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}boolean\texorpdfstring{$>$}{>}}.\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20494}{}\doxysubsection{\texorpdfstring{is\+Symlink(path)}{isSymlink(path)}}\label{md_node__modules_2path-type_2readme_autotoc_md20494}
+Check whether the passed {\ttfamily path} is a symlink.
+
+Returns a {\ttfamily Promise\texorpdfstring{$<$}{<}boolean\texorpdfstring{$>$}{>}}.\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20495}{}\doxysubsection{\texorpdfstring{is\+File\+Sync(path)}{isFileSync(path)}}\label{md_node__modules_2path-type_2readme_autotoc_md20495}
+Synchronously check whether the passed {\ttfamily path} is a file.
+
+Returns a {\ttfamily boolean}.\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20496}{}\doxysubsection{\texorpdfstring{is\+Directory\+Sync(path)}{isDirectorySync(path)}}\label{md_node__modules_2path-type_2readme_autotoc_md20496}
+Synchronously check whether the passed {\ttfamily path} is a directory.
+
+Returns a {\ttfamily boolean}.\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20497}{}\doxysubsection{\texorpdfstring{is\+Symlink\+Sync(path)}{isSymlinkSync(path)}}\label{md_node__modules_2path-type_2readme_autotoc_md20497}
+Synchronously check whether the passed {\ttfamily path} is a symlink.
+
+Returns a {\ttfamily boolean}.\hypertarget{md_node__modules_2path-type_2readme_autotoc_md20498}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2path-type_2readme_autotoc_md20498}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

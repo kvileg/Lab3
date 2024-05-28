@@ -1,0 +1,467 @@
+\doxysection{strong Class Reference}
+\hypertarget{classstrong}{}\label{classstrong}\index{strong@{strong}}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{classstrong_autotoc_md7695}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+name}{Opt.name}}\label{classstrong_autotoc_md7695}
+Set a canonical option identifier to be used anywhere in the API.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+name} option name~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}\hypertarget{classstrong_autotoc_md7696}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+title}{Opt.title}}\label{classstrong_autotoc_md7696}
+{\bfseries{ Set a long description for option to be used anywhere in text messages.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+title} option title~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}\hypertarget{classstrong_autotoc_md7697}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+short}{Opt.short}}\label{classstrong_autotoc_md7697}
+{\bfseries{{\bfseries{ Set a short key for option to be used with one hyphen from command line.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+short}~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}\hypertarget{classstrong_autotoc_md7698}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+long}{Opt.long}}\label{classstrong_autotoc_md7698}
+{\bfseries{{\bfseries{{\bfseries{ Set a short key for option to be used with double hyphens from command line.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+long}~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}\hypertarget{classstrong_autotoc_md7699}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+flag}{Opt.flag}}\label{classstrong_autotoc_md7699}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Make an option boolean, i.\+e. option without value.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}\hypertarget{classstrong_autotoc_md7700}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+arr}{Opt.arr}}\label{classstrong_autotoc_md7700}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Makes an option accepts multiple values.~\newline
+ Otherwise, the value will be used by the latter passed.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7701}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+req}{Opt.req}}\label{classstrong_autotoc_md7701}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Makes an option req.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7702}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+only}{Opt.only}}\label{classstrong_autotoc_md7702}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Makes an option to act as a command, i.\+e. program will exit just after option action.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7703}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+val}{Opt.val}}\label{classstrong_autotoc_md7703}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Set a validation (or value) function for argument.~\newline
+ Value from command line passes through before becoming available from API.~\newline
+ Using for validation and convertion simple types to any values.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily \+\_\+val} validating function, invoked in the context of option instance and has one parameter with value from command line~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7704}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+def}{Opt.def}}\label{classstrong_autotoc_md7704}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Set a default value for option. Default value passed through validation function as ordinary value.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Object} {\ttfamily \+\_\+def}~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7705}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+input}{Opt.input}}\label{classstrong_autotoc_md7705}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Make option value inputting stream. It\textquotesingle{}s add useful validation and shortcut for STDIN. {\bfseries{\begin{DoxyReturn}{Returns}
+\texorpdfstring{$\ast$}{*}\{COA.\+Opt\}\texorpdfstring{$\ast$}{*} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7706}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+output}{Opt.output}}\label{classstrong_autotoc_md7706}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Make option value outputing stream.~\newline
+ It\textquotesingle{}s add useful validation and shortcut for STDOUT.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7707}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+act}{Opt.act}}\label{classstrong_autotoc_md7707}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Add action for current option command. This action is performed if the current option is present in parsed options (with any value).~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily act} action function, invoked in the context of command instance and has the parameters\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} parsed options~\newline
+
+\item {\itshape Array} {\ttfamily args} parsed arguments~\newline
+
+\item {\itshape Object} {\ttfamily res} actions result accumulator~\newline
+ It can return rejected promise by Cmd.\+reject (in case of error) or any other value treated as result.~\newline
+ {\bfseries{}}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7708}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+comp}{Opt.comp}}\label{classstrong_autotoc_md7708}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Set custom additional completion for current option.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily fn} completion generation function, invoked in the context of command instance. Accepts parameters\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} completion options~\newline
+ It can return promise or any other value treated as result.~\newline
+ {\bfseries{}}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7709}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+end}{Opt.end}}\label{classstrong_autotoc_md7709}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Finish chain for current option and return parent command instance.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Cmd} {\ttfamily parent} command
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7710}{}\doxysubsubsection{\texorpdfstring{Arg}{Arg}}\label{classstrong_autotoc_md7710}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Argument is a unnamed entity.~\newline
+ From command line arguments passed as list of unnamed values.}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7711}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+name}{Arg.name}}\label{classstrong_autotoc_md7711}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Set a canonical argument identifier to be used anywhere in text messages.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+name} argument name~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7712}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+title}{Arg.title}}\label{classstrong_autotoc_md7712}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Set a long description for argument to be used anywhere in text messages.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+title} argument title~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7713}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+arr}{Arg.arr}}\label{classstrong_autotoc_md7713}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Makes an argument accepts multiple values.~\newline
+ Otherwise, the value will be used by the latter passed.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7714}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+req}{Arg.req}}\label{classstrong_autotoc_md7714}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Makes an argument req.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7715}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+val}{Arg.val}}\label{classstrong_autotoc_md7715}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Set a validation (or value) function for argument.~\newline
+ Value from command line passes through before becoming available from API.~\newline
+ Using for validation and convertion simple types to any values.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily \+\_\+val} validating function, invoked in the context of argument instance and has one parameter with value from command line~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7716}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+def}{Arg.def}}\label{classstrong_autotoc_md7716}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Set a default value for argument. Default value passed through validation function as ordinary value.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Object} {\ttfamily \+\_\+def}~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7717}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+output}{Arg.output}}\label{classstrong_autotoc_md7717}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Make argument value outputing stream.~\newline
+ It\textquotesingle{}s add useful validation and shortcut for STDOUT.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7718}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+comp}{Arg.comp}}\label{classstrong_autotoc_md7718}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Set custom additional completion for current argument.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily fn} completion generation function, invoked in the context of command instance. Accepts parameters\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} completion options~\newline
+ It can return promise or any other value treated as result.~\newline
+ {\bfseries{}}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} instance (for chainability)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7719}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+end}{Arg.end}}\label{classstrong_autotoc_md7719}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Finish chain for current option and return parent command instance.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Cmd} {\ttfamily parent} command
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7743}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+name}{Opt.name}}\label{classstrong_autotoc_md7743}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Определяет канонический идентификатор параметра, используемый в вызовах API.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+name} имя параметра~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7744}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+title}{Opt.title}}\label{classstrong_autotoc_md7744}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Определяет описание для параметра, используемое в текстовых сообщениях.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+title} название параметра~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7745}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+short}{Opt.short}}\label{classstrong_autotoc_md7745}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Назначает ключ для короткого имени параметра, передаваемого из командной строки с одинарным дефисом (например, {\ttfamily -\/v}).~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+short}~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7746}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+long}{Opt.long}}\label{classstrong_autotoc_md7746}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Назначает ключ для длинного имени параметра, передаваемого из командной строки с двойным дефисом (например, {\ttfamily -\/-\/version}).~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+long}~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7747}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+flag}{Opt.flag}}\label{classstrong_autotoc_md7747}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Помечает параметр как логический, т.\+е. параметр не имеющий значения.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7748}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+arr}{Opt.arr}}\label{classstrong_autotoc_md7748}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Помечает параметр как принимающий множественные значения.~\newline
+ Иначе будет использовано последнее переданное значение параметра.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7749}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+req}{Opt.req}}\label{classstrong_autotoc_md7749}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Помечает параметр как обязательный.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7750}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+only}{Opt.only}}\label{classstrong_autotoc_md7750}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Интерпретирует параметр как команду, т.\+е. программа будет завершена сразу после выполнения параметра.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7751}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+val}{Opt.val}}\label{classstrong_autotoc_md7751}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Назначает функцию валидации (или трансформации значения) для значения параметра.~\newline
+ Значение, полученное из командной строки, передается в функцию-\/валидатор прежде чем оно станет доступно из API.~\newline
+ Используется для валидации и трансформации введенных данных.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily \+\_\+val} функция валидации, исполняемая в контексте экземпляра параметра и принимающая в качестве единственного параметра значение, полученное из командной строки~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7752}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+def}{Opt.def}}\label{classstrong_autotoc_md7752}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Назначает значение параметра по умолчанию. Это значение также передается в функцию валидации как обычное значение.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Object} {\ttfamily \+\_\+def}~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7753}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+input}{Opt.input}}\label{classstrong_autotoc_md7753}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Помечает параметр как принимающий ввод пользователя. ~\newline
+ Позволяет использовать валидацию для STDIN.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+\texorpdfstring{$\ast$}{*}\{COA.\+Opt\}\texorpdfstring{$\ast$}{*} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7754}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+output}{Opt.output}}\label{classstrong_autotoc_md7754}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Помечает параметр как вывод.~\newline
+ Позволяет использовать валидацию для STDOUT.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7755}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+act}{Opt.act}}\label{classstrong_autotoc_md7755}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Добавляет (или создает) действие для текущего параметра команды. Это действие будет выполнено, если текущий параметр есть в списке полученных параметров (с любым значением).~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily act} функция, выполняемая в контексте экземпляра текущей команды и принимающая следующие параметры\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} параметры команды~\newline
+
+\item {\itshape Array} {\ttfamily args} аргументы команды~\newline
+
+\item {\itshape Object} {\ttfamily res} объект-\/аккумулятор результатов~\newline
+ Функция может вернуть проваленный промис из Cmd.\+reject (в случае ошибки) или любое другое значение, рассматриваемое как результат.~\newline
+ {\bfseries{}}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7756}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+comp}{Opt.comp}}\label{classstrong_autotoc_md7756}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Назначает кастомную функцию автодополнения для текущей команды.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily fn} функция-\/генератор автодоплнения, исполняемая в контексте экземпляра команды. Принимает параметры\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} параметры автодополнения~\newline
+ Может возвращать промис или любое другое значение, рассматриваемое как результат исполнения команды.~\newline
+ {\bfseries{}}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр параметра (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7757}{}\doxysubsubsubsection{\texorpdfstring{Opt.\+end}{Opt.end}}\label{classstrong_autotoc_md7757}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Завершает цепочку методов текущего параметра и возвращает экземпляр родительской команды.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Cmd} {\ttfamily parent} родительская команда
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7758}{}\doxysubsubsection{\texorpdfstring{Arg}{Arg}}\label{classstrong_autotoc_md7758}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Аргумент — неименованная сущность.~\newline
+ Аргументы передаются из командной строки как список неименованных значений.}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7759}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+name}{Arg.name}}\label{classstrong_autotoc_md7759}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Определяет канонический идентификатор аргумента, используемый в вызовах API.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+name} имя аргумента~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7760}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+title}{Arg.title}}\label{classstrong_autotoc_md7760}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Определяет описание для аргумента, используемое в текстовых сообщениях.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape String} {\ttfamily \+\_\+title} описание аргумента~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7761}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+arr}{Arg.arr}}\label{classstrong_autotoc_md7761}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Помечает аргумент как принимающий множественные значения.~\newline
+ Иначе будет использовано последнее переданное значение аргумента.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7762}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+req}{Arg.req}}\label{classstrong_autotoc_md7762}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Помечает аргумент как обязательный.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7763}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+val}{Arg.val}}\label{classstrong_autotoc_md7763}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Назначает функцию валидации (или трансформации значения) для аргумента.~\newline
+ Значение, полученное из командной строки, передается в функцию-\/валидатор прежде чем оно станет доступно из API.~\newline
+ Используется для валидации и трансформации введенных данных.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily \+\_\+val} функция валидации, исполняемая в контексте экземпляра аргумента и принимающая в качестве единственного параметра значение, полученное из командной строки~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Opt} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7764}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+def}{Arg.def}}\label{classstrong_autotoc_md7764}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Назначает дефолтное значение для аргумента. Дефолтное значение передается в функцию валидации как обычное значение.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Object} {\ttfamily \+\_\+def}~\newline
+ {\bfseries{}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7765}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+output}{Arg.output}}\label{classstrong_autotoc_md7765}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Помечает параметр как вывод.~\newline
+ Позволяет назначить валидацию для STDOUT.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7766}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+comp}{Arg.comp}}\label{classstrong_autotoc_md7766}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Назначает кастомную функцию автодополнения для текущего аргумента.~\newline
+ {\bfseries{
+\begin{DoxyParams}{Parameters}
+{\em $<$/strong$>$} & {\itshape Function} {\ttfamily fn} функция-\/генератор автодоплнения, исполняемая в контексте текущей команды. Принимает параметры\+:~\newline
+
+\begin{DoxyItemize}
+\item {\itshape Object} {\ttfamily opts} параметры Может возвращать промис или любое другое значение, рассматриваемое как результат исполнения команды.~\newline
+ {\bfseries{}}
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{}} {\itshape COA.\+Arg} {\ttfamily this} экземпляр аргумента (для поддержки цепочки методов)
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}\hypertarget{classstrong_autotoc_md7767}{}\doxysubsubsubsection{\texorpdfstring{Arg.\+end}{Arg.end}}\label{classstrong_autotoc_md7767}
+{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{{\bfseries{ Завершает цепочку методов текущего аргумента и возвращает экземпляр родительской команды.~\newline
+ {\bfseries{\begin{DoxyReturn}{Returns}
+{\itshape COA.\+Cmd} {\ttfamily parent} родительская команда 
+\end{DoxyReturn}
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+node\+\_\+modules/coa/\mbox{\hyperlink{node__modules_2coa_2README_8md}{README.\+md}}\end{DoxyCompactItemize}

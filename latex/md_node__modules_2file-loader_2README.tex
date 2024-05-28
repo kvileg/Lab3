@@ -1,0 +1,705 @@
+\chapter{README}
+\hypertarget{md_node__modules_2file-loader_2README}{}\label{md_node__modules_2file-loader_2README}\index{README@{README}}
+ \href{https://github.com/webpack/webpack}{\texttt{  }} 
+
+\href{https://npmjs.com/package/file-loader}{\texttt{ }} \href{https://nodejs.org}{\texttt{ }} \href{https://david-dm.org/webpack-contrib/file-loader}{\texttt{ }} \href{https://github.com/webpack-contrib/file-loader/actions}{\texttt{ }} \href{https://codecov.io/gh/webpack-contrib/file-loader}{\texttt{ }} \href{https://gitter.im/webpack/webpack}{\texttt{ }} \href{https://packagephobia.now.sh/result?p=file-loader}{\texttt{ }}\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13453}{}\doxysection{\texorpdfstring{file-\/loader}{file-loader}}\label{md_node__modules_2file-loader_2README_autotoc_md13453}
+The {\ttfamily file-\/loader} resolves {\ttfamily import}/{\ttfamily require()} on a file into a url and emits the file into the output directory.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13454}{}\doxysubsection{\texorpdfstring{Getting Started}{Getting Started}}\label{md_node__modules_2file-loader_2README_autotoc_md13454}
+To begin, you\textquotesingle{}ll need to install {\ttfamily file-\/loader}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ file-\/loader\ -\/-\/save-\/dev}
+
+\end{DoxyCode}
+
+
+Import (or {\ttfamily require}) the target file(s) in one of the bundle\textquotesingle{}s files\+:
+
+{\bfseries{file.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ img\ from\ './file.png';}
+
+\end{DoxyCode}
+
+
+Then add the loader to your {\ttfamily webpack} config. For example\+:
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+And run {\ttfamily webpack} via your preferred method. This will emit {\ttfamily file.\+png} as a file in the output directory (with the specified naming convention, if options are specified to do so) and returns the public URI of the file.
+
+\begin{quote}
+ℹ️ By default the filename of the resulting file is the hash of the file\textquotesingle{}s contents with the original extension of the required resource. \end{quote}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13455}{}\doxysubsection{\texorpdfstring{Options}{Options}}\label{md_node__modules_2file-loader_2README_autotoc_md13455}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13456}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$name$<$/tt$>$}{<tt>name</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13456}
+Type\+: {\ttfamily String\texorpdfstring{$\vert$}{|}\+Function} Default\+: `'\mbox{[}contenthash\mbox{]}.\mbox{[}ext\mbox{]}\textquotesingle{}\`{}
+
+Specifies a custom filename template for the target file(s) using the query parameter {\ttfamily name}. For example, to emit a file from your {\ttfamily context} directory into the output directory retaining the full directory structure, you might use\+:\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13457}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+String$<$/tt$>$}{<tt>String</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13457}
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ name:\ '[path][name].[ext]',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13458}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+Function$<$/tt$>$}{<tt>Function</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13458}
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ name(resourcePath,\ resourceQuery)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ \`{}resourcePath`\ -\/\ \`{}/absolute/path/to/file.js`}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ \`{}resourceQuery`\ -\/\ \`{}?foo=bar`}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (process.env.NODE\_ENV\ ===\ 'development')\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ '[path][name].[ext]';}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ return\ '[contenthash].[ext]';}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+ℹ️ By default the path and name you specify will output the file in that same directory, and will also use the same URI path to access the file. \end{quote}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13459}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$output\+Path$<$/tt$>$}{<tt>outputPath</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13459}
+Type\+: {\ttfamily String\texorpdfstring{$\vert$}{|}\+Function} Default\+: {\ttfamily undefined}
+
+Specify a filesystem path where the target file(s) will be placed.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13460}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+String$<$/tt$>$}{<tt>String</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13460}
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ outputPath:\ 'images',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13461}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+Function$<$/tt$>$}{<tt>Function</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13461}
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ outputPath:\ (url,\ resourcePath,\ context)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ \`{}resourcePath`\ is\ original\ absolute\ path\ to\ asset}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ \`{}context`\ is\ directory\ where\ stored\ asset\ (`rootContext`)\ or\ \`{}context`\ option}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ To\ get\ relative\ path\ you\ can\ use}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ const\ relativePath\ =\ path.relative(context,\ resourcePath);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (/my-\/custom-\/image\(\backslash\).png/.test(resourcePath))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ \`{}other\_output\_path/\$\{url\}`;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (/images/.test(context))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ \`{}image\_output\_path/\$\{url\}`;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ return\ \`{}output\_path/\$\{url\}`;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13462}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$public\+Path$<$/tt$>$}{<tt>publicPath</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13462}
+Type\+: {\ttfamily String\texorpdfstring{$\vert$}{|}\+Function} Default\+: \href{https://webpack.js.org/api/module-variables/\#__webpack_public_path__-webpack-specific-}{\texttt{ {\ttfamily \+\_\+\+\_\+webpack\+\_\+public\+\_\+path\+\_\+\+\_\+}}}+output\+Path
+
+Specifies a custom public path for the target file(s).\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13463}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+String$<$/tt$>$}{<tt>String</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13463}
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ publicPath:\ 'assets',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13464}{}\doxyparagraph{\texorpdfstring{$<$tt$>$\+Function$<$/tt$>$}{<tt>Function</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13464}
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ publicPath:\ (url,\ resourcePath,\ context)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ \`{}resourcePath`\ is\ original\ absolute\ path\ to\ asset}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ \`{}context`\ is\ directory\ where\ stored\ asset\ (`rootContext`)\ or\ \`{}context`\ option}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ To\ get\ relative\ path\ you\ can\ use}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ //\ const\ relativePath\ =\ path.relative(context,\ resourcePath);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (/my-\/custom-\/image\(\backslash\).png/.test(resourcePath))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ \`{}other\_public\_path/\$\{url\}`;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (/images/.test(context))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ \`{}image\_output\_path/\$\{url\}`;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ return\ \`{}public\_path/\$\{url\}`;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13465}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$post\+Transform\+Public\+Path$<$/tt$>$}{<tt>postTransformPublicPath</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13465}
+Type\+: {\ttfamily Function} Default\+: {\ttfamily undefined}
+
+Specifies a custom function to post-\/process the generated public path. This can be used to prepend or append dynamic global variables that are only available at runtime, like {\ttfamily \+\_\+\+\_\+webpack\+\_\+public\+\_\+path\+\_\+\+\_\+}. This would not be possible with just {\ttfamily public\+Path}, since it stringifies the values.
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpg|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ publicPath:\ '/some/path/',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ postTransformPublicPath:\ (p)\ =>\ \`{}\_\_webpack\_public\_path\_\_\ +\ \$\{p\}`,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13466}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$context$<$/tt$>$}{<tt>context</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13466}
+Type\+: {\ttfamily String} Default\+: \href{https://webpack.js.org/configuration/entry-context/\#context}{\texttt{ {\ttfamily context}}}
+
+Specifies a custom file context.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ context:\ 'project',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13467}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$emit\+File$<$/tt$>$}{<tt>emitFile</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13467}
+Type\+: {\ttfamily Boolean} Default\+: {\ttfamily true}
+
+If true, emits a file (writes a file to the filesystem). If false, the loader will return a public URI but {\bfseries{will not}} emit the file. It is often useful to disable this option for server-\/side packages.
+
+{\bfseries{file.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ bundle\ file}
+\DoxyCodeLine{import\ img\ from\ './file.png';}
+
+\end{DoxyCode}
+
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).css\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ emitFile:\ false,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13468}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$reg\+Exp$<$/tt$>$}{<tt>regExp</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13468}
+Type\+: {\ttfamily Reg\+Exp} Default\+: {\ttfamily undefined}
+
+Specifies a Regular Expression to one or many parts of the target file path. The capture groups can be reused in the {\ttfamily name} property using {\ttfamily \mbox{[}N\mbox{]}} \href{https://github.com/webpack-contrib/file-loader\#placeholders}{\texttt{ placeholder}}.
+
+{\bfseries{file.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ img\ from\ './customer01/file.png';}
+
+\end{DoxyCode}
+
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ regExp:\ /\(\backslash\)/([a-\/z0-\/9]+)\(\backslash\)/[a-\/z0-\/9]+\(\backslash\).png\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ '[1]-\/[name].[ext]',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+ℹ️ If {\ttfamily \mbox{[}0\mbox{]}} is used, it will be replaced by the entire tested string, whereas {\ttfamily \mbox{[}1\mbox{]}} will contain the first capturing parenthesis of your regex and so on... \end{quote}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13469}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$es\+Module$<$/tt$>$}{<tt>esModule</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13469}
+Type\+: {\ttfamily Boolean} Default\+: {\ttfamily true}
+
+By default, {\ttfamily file-\/loader} generates JS modules that use the ES modules syntax. There are some cases in which using ES modules is beneficial, like in the case of \href{https://webpack.js.org/plugins/module-concatenation-plugin/}{\texttt{ module concatenation}} and \href{https://webpack.js.org/guides/tree-shaking/}{\texttt{ tree shaking}}.
+
+You can enable a Common\+JS module syntax using\+:
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).css\$/,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ esModule:\ false,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13470}{}\doxysubsection{\texorpdfstring{Placeholders}{Placeholders}}\label{md_node__modules_2file-loader_2README_autotoc_md13470}
+Full information about placeholders you can find \href{https://github.com/webpack/loader-utils\#interpolatename}{\texttt{ here}}.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13471}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}ext\mbox{]}$<$/tt$>$}{<tt>[ext]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13471}
+Type\+: {\ttfamily String} Default\+: {\ttfamily file.\+extname}
+
+The file extension of the target file/resource.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13472}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}name\mbox{]}$<$/tt$>$}{<tt>[name]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13472}
+Type\+: {\ttfamily String} Default\+: {\ttfamily file.\+basename}
+
+The basename of the file/resource.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13473}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}path\mbox{]}$<$/tt$>$}{<tt>[path]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13473}
+Type\+: {\ttfamily String} Default\+: {\ttfamily file.\+directory}
+
+The path of the resource relative to the webpack/config {\ttfamily context}.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13474}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}folder\mbox{]}$<$/tt$>$}{<tt>[folder]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13474}
+Type\+: {\ttfamily String} Default\+: {\ttfamily file.\+folder}
+
+The folder of the resource is in.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13475}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}query\mbox{]}$<$/tt$>$}{<tt>[query]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13475}
+Type\+: {\ttfamily String} Default\+: {\ttfamily file.\+query}
+
+The query of the resource, i.\+e. {\ttfamily ?foo=bar}.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13476}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}emoji\mbox{]}$<$/tt$>$}{<tt>[emoji]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13476}
+Type\+: {\ttfamily String} Default\+: {\ttfamily undefined}
+
+A random emoji representation of {\ttfamily content}.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13477}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}emoji\+:$<$length$>$\mbox{]}$<$/tt$>$}{<tt>[emoji:<length>]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13477}
+Type\+: {\ttfamily String} Default\+: {\ttfamily undefined}
+
+Same as above, but with a customizable number of emojis\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13478}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}hash\mbox{]}$<$/tt$>$}{<tt>[hash]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13478}
+Type\+: {\ttfamily String} Default\+: {\ttfamily md4}
+
+Specifies the hash method to use for hashing the file content.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13479}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}contenthash\mbox{]}$<$/tt$>$}{<tt>[contenthash]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13479}
+Type\+: {\ttfamily String} Default\+: {\ttfamily md4}
+
+Specifies the hash method to use for hashing the file content.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13480}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}$<$hash\+Type$>$\+:hash\+:$<$digest\+Type$>$\+:$<$length$>$\mbox{]}$<$/tt$>$}{<tt>[<hashType>:hash:<digestType>:<length>]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13480}
+Type\+: {\ttfamily String}
+
+The hash of options.\+content (Buffer) (by default it\textquotesingle{}s the hex digest of the hash).\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13481}{}\doxyparagraph{\texorpdfstring{$<$tt$>$digest\+Type$<$/tt$>$}{<tt>digestType</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13481}
+Type\+: {\ttfamily String} Default\+: `\textquotesingle{}hex'\`{}
+
+The \href{https://en.wikipedia.org/wiki/Cryptographic_hash_function}{\texttt{ digest}} that the hash function should use. Valid values include\+: base26, base32, base36, base49, base52, base58, base62, base64, and hex.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13482}{}\doxyparagraph{\texorpdfstring{$<$tt$>$hash\+Type$<$/tt$>$}{<tt>hashType</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13482}
+Type\+: {\ttfamily String} Default\+: `\textquotesingle{}md4'\`{}
+
+The type of hash that the has function should use. Valid values include\+: {\ttfamily md4}, {\ttfamily md5}, {\ttfamily sha1}, {\ttfamily sha256}, and {\ttfamily sha512}.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13483}{}\doxyparagraph{\texorpdfstring{$<$tt$>$length$<$/tt$>$}{<tt>length</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13483}
+Type\+: {\ttfamily Number} Default\+: {\ttfamily undefined}
+
+Users may also specify a length for the computed hash.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13484}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$\mbox{[}\+N\mbox{]}$<$/tt$>$}{<tt>[N]</tt>}}\label{md_node__modules_2file-loader_2README_autotoc_md13484}
+Type\+: {\ttfamily String} Default\+: {\ttfamily undefined}
+
+The n-\/th match obtained from matching the current file name against the {\ttfamily reg\+Exp}.\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13485}{}\doxysubsection{\texorpdfstring{Examples}{Examples}}\label{md_node__modules_2file-loader_2README_autotoc_md13485}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13486}{}\doxysubsubsection{\texorpdfstring{Names}{Names}}\label{md_node__modules_2file-loader_2README_autotoc_md13486}
+The following examples show how one might use {\ttfamily file-\/loader} and what the result would be.
+
+{\bfseries{file.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ png\ from\ './image.png';}
+
+\end{DoxyCode}
+
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ 'dirname/[contenthash].[ext]',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+Result\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ result}
+\DoxyCodeLine{dirname/0dcbbaa701328ae351f.png}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{file.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ png\ from\ './image.png';}
+
+\end{DoxyCode}
+
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ '[sha512:hash:base64:7].[ext]',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+Result\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ result}
+\DoxyCodeLine{gdyb21L.png}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{file.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ png\ from\ './path/to/file.png';}
+
+\end{DoxyCode}
+
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ '[path][name].[ext]?[contenthash]',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+Result\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ result}
+\DoxyCodeLine{path/to/file.png?e43b20c069c4a01867c31e98cbce33c9}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13489}{}\doxysubsubsection{\texorpdfstring{CDN}{CDN}}\label{md_node__modules_2file-loader_2README_autotoc_md13489}
+The following examples show how to use {\ttfamily file-\/loader} for CDN uses query params.
+
+{\bfseries{file.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ png\ from\ './directory/image.png?width=300\&height=300';}
+
+\end{DoxyCode}
+
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ output:\ \{}
+\DoxyCodeLine{\ \ \ \ publicPath:\ 'https://cdn.example.com/',}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpe?g|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ name:\ '[path][name].[ext][query]',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+Result\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ result}
+\DoxyCodeLine{https://cdn.example.com/directory/image.png?width=300\&height=300}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13490}{}\doxysubsubsection{\texorpdfstring{Dynamic public path depending on environment variable at run time}{Dynamic public path depending on environment variable at run time}}\label{md_node__modules_2file-loader_2README_autotoc_md13490}
+An application might want to configure different CDN hosts depending on an environment variable that is only available when running the application. This can be an advantage, as only one build of the application is necessary, which behaves differently depending on environment variables of the deployment environment. Since file-\/loader is applied when compiling the application, and not when running it, the environment variable cannot be used in the file-\/loader configuration. A way around this is setting the {\ttfamily \+\_\+\+\_\+webpack\+\_\+public\+\_\+path\+\_\+\+\_\+} to the desired CDN host depending on the environment variable at the entrypoint of the application. The option {\ttfamily post\+Transform\+Public\+Path} can be used to configure a custom path depending on a variable like {\ttfamily \+\_\+\+\_\+webpack\+\_\+public\+\_\+path\+\_\+\+\_\+}.
+
+{\bfseries{main.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ assetPrefixForNamespace\ =\ (namespace)\ =>\ \{}
+\DoxyCodeLine{\ \ switch\ (namespace)\ \{}
+\DoxyCodeLine{\ \ \ \ case\ 'prod':}
+\DoxyCodeLine{\ \ \ \ \ \ return\ 'https://cache.myserver.net/web';}
+\DoxyCodeLine{\ \ \ \ case\ 'uat':}
+\DoxyCodeLine{\ \ \ \ \ \ return\ 'https://cache-\/uat.myserver.net/web';}
+\DoxyCodeLine{\ \ \ \ case\ 'st':}
+\DoxyCodeLine{\ \ \ \ \ \ return\ 'https://cache-\/st.myserver.net/web';}
+\DoxyCodeLine{\ \ \ \ case\ 'dev':}
+\DoxyCodeLine{\ \ \ \ \ \ return\ 'https://cache-\/dev.myserver.net/web';}
+\DoxyCodeLine{\ \ \ \ default:}
+\DoxyCodeLine{\ \ \ \ \ \ return\ '';}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{const\ namespace\ =\ process.env.NAMESPACE;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\_\_webpack\_public\_path\_\_\ =\ \`{}\$\{assetPrefixForNamespace(namespace)\}/`;}
+
+\end{DoxyCode}
+
+
+{\bfseries{file.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ png\ from\ './image.png';}
+
+\end{DoxyCode}
+
+
+{\bfseries{webpack.\+config.\+js}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ test:\ /\(\backslash\).(png|jpg|gif)\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ loader:\ 'file-\/loader',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ name:\ '[name].[contenthash].[ext]',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ outputPath:\ 'static/assets/',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ publicPath:\ 'static/assets/',}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ postTransformPublicPath:\ (p)\ =>\ \`{}\_\_webpack\_public\_path\_\_\ +\ \$\{p\}`,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+Result when run with {\ttfamily NAMESPACE=prod} env variable\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ result}
+\DoxyCodeLine{https://cache.myserver.net/web/static/assets/image.somehash.png}
+
+\end{DoxyCode}
+
+
+Result when run with {\ttfamily NAMESPACE=dev} env variable\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ result}
+\DoxyCodeLine{https://cache-\/dev.myserver.net/web/static/assets/image.somehash.png}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13491}{}\doxysubsection{\texorpdfstring{Contributing}{Contributing}}\label{md_node__modules_2file-loader_2README_autotoc_md13491}
+Please take a moment to read our contributing guidelines if you haven\textquotesingle{}t yet done so.
+
+CONTRIBUTING\hypertarget{md_node__modules_2file-loader_2README_autotoc_md13492}{}\doxysubsection{\texorpdfstring{License}{License}}\label{md_node__modules_2file-loader_2README_autotoc_md13492}
+\href{./LICENSE}{\texttt{ MIT}} 

@@ -1,0 +1,81 @@
+\chapter{\texorpdfstring{$<$}{<}a href="{}https\+://github.\+com/postcss/postcss"{} \texorpdfstring{$>$}{>}postcss\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}-\/svgo}
+\hypertarget{md_node__modules_2postcss-svgo_2README}{}\label{md_node__modules_2postcss-svgo_2README}\index{$<$a href="{}https://github.com/postcss/postcss"{} $>$postcss$<$/a$>$-\/svgo@{$<$a href=""https://github.com/postcss/postcss"" $>$postcss$<$/a$>$-\/svgo}}
+\label{md_node__modules_2postcss-svgo_2README_autotoc_md22152}%
+\Hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22152}%
+ \begin{quote}
+Optimise inline SVG with Post\+CSS. \end{quote}
+\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22153}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22153}
+With \href{https://npmjs.org/package/postcss-svgo}{\texttt{ npm}} do\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ postcss-\/svgo\ -\/-\/save}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22154}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22154}
+\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22155}{}\doxysubsection{\texorpdfstring{Input}{Input}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22155}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{h1\ \{}
+\DoxyCodeLine{\ \ \ \ background:\ url('data:image/svg+xml;charset=utf-\/8,<?xml\ version="{}1.0"{}\ encoding="{}utf-\/8"{}?><!DOCTYPE\ svg\ PUBLIC\ "{}-\///W3C//DTD\ SVG\ 1.1//EN"{}\ "{}http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"{}><svg\ version="{}1.1"{}\ id="{}Layer\_1"{}\ xmlns="{}http://www.w3.org/2000/svg"{}\ xmlns:xlink="{}http://www.w3.org/1999/xlink"{}\ xml:space="{}preserve"{}><circle\ cx="{}50"{}\ cy="{}50"{}\ r="{}40"{}\ fill="{}yellow"{}\ /></svg>');}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{h2\ \{}
+\DoxyCodeLine{\ \ \ \ background:\ url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDAiIGZpbGw9InllbGxvdyIgLz48IS0tdGVzdCBjb21tZW50LS0+PC9zdmc+');}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22156}{}\doxysubsection{\texorpdfstring{Output}{Output}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22156}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{h1\ \{}
+\DoxyCodeLine{\ \ \ \ background:\ url('data:image/svg+xml;charset=utf-\/8,<svg\ xmlns="{}http://www.w3.org/2000/svg"{}><circle\ cx="{}50"{}\ cy="{}50"{}\ r="{}40"{}\ fill="{}\%23ff0"{}/></svg>');}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{h2\ \{}
+\DoxyCodeLine{\ \ \ \ background:\ url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQwIiBmaWxsPSIjZmYwIi8+PC9zdmc+');}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22157}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22157}
+\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22158}{}\doxysubsection{\texorpdfstring{$<$tt$>$svgo(\mbox{[}options\mbox{]})$<$/tt$>$}{<tt>svgo([options])</tt>}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22158}
+\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22159}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22159}
+\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22160}{}\doxyparagraph{\texorpdfstring{encode}{encode}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22160}
+Type\+: {\ttfamily boolean} Default\+: {\ttfamily undefined}
+
+If {\ttfamily true}, it will encode URL-\/unsafe characters such as {\ttfamily \texorpdfstring{$<$}{<}}, {\ttfamily \texorpdfstring{$>$}{>}} and {\ttfamily \&}; {\ttfamily false} will decode these characters, and {\ttfamily undefined} will neither encode nor decode the original input. Note that regardless of this setting, {\ttfamily \#} will always be URL-\/encoded.\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22161}{}\doxyparagraph{\texorpdfstring{plugins}{plugins}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22161}
+Optionally, you can customise the output by specifying the {\ttfamily plugins} option. You will need to provide the config in comma separated objects, like the example below. Note that you can either disable the plugin by setting it to {\ttfamily false}, or pass different options to change the default behaviour.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ postcss\ =\ require('postcss');}
+\DoxyCodeLine{var\ svgo\ =\ require('postcss-\/svgo');}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ opts\ =\ \{}
+\DoxyCodeLine{\ \ \ \ plugins:\ [\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ removeDoctype:\ false}
+\DoxyCodeLine{\ \ \ \ \},\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ removeComments:\ false}
+\DoxyCodeLine{\ \ \ \ \},\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cleanupNumericValues:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ floatPrecision:\ 2}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \},\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ convertColors:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ names2hex:\ false,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ rgb2hex:\ false}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}]}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{postcss([\ svgo(opts)\ ]).process(css).then(function\ (result)\ \{}
+\DoxyCodeLine{\ \ \ \ console.log(result.css)}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+
+
+You can view the \href{https://github.com/svg/svgo/tree/master/plugins}{\texttt{ full list of plugins here}}.\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22162}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22162}
+See the \href{https://github.com/postcss/postcss\#usage}{\texttt{ Post\+CSS documentation}} for examples for your environment.\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22163}{}\doxysection{\texorpdfstring{Contributors}{Contributors}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22163}
+See \href{https://github.com/cssnano/cssnano/blob/master/CONTRIBUTORS.md}{\texttt{ CONTRIBUTORS.\+md}}.\hypertarget{md_node__modules_2postcss-svgo_2README_autotoc_md22164}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2postcss-svgo_2README_autotoc_md22164}
+MIT © \href{http://beneb.info}{\texttt{ Ben Briggs}} 

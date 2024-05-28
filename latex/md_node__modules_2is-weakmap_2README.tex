@@ -1,0 +1,31 @@
+\chapter{is-\/weakmap \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/is-\/weakmap"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/inspect-\/js/is-\/weakmap.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2is-weakmap_2README}{}\label{md_node__modules_2is-weakmap_2README}\index{is-\/weakmap $<$sup$>$$<$a href="{}https://npmjs.org/package/is-\/weakmap"{} $>$$<$img src="{}https://versionbadg.es/inspect-\/js/is-\/weakmap.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{is-\/weakmap $<$sup$>$$<$a href=""https://npmjs.org/package/is-\/weakmap"" $>$$<$img src=""https://versionbadg.es/inspect-\/js/is-\/weakmap.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2is-weakmap_2README_autotoc_md16058}%
+\Hypertarget{md_node__modules_2is-weakmap_2README_autotoc_md16058}%
+ \href{https://github.com/inspect-js/is-weakmap/actions}{\texttt{ }} \href{https://app.codecov.io/gh/inspect-js/is-weakmap/}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=is-weakmap}{\texttt{ }}
+
+\href{https://npmjs.org/package/is-weakmap}{\texttt{ }}
+
+Is this value a JS Weak\+Map? This module works cross-\/realm/iframe, and despite ES6 @to\+String\+Tag.\hypertarget{md_node__modules_2is-weakmap_2README_autotoc_md16059}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2is-weakmap_2README_autotoc_md16059}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ isWeakMap\ =\ require('is-\/weakmap');}
+\DoxyCodeLine{assert(!isWeakMap(function\ ()\ \{\}));}
+\DoxyCodeLine{assert(!isWeakMap(null));}
+\DoxyCodeLine{assert(!isWeakMap(function*\ ()\ \{\ yield\ 42;\ return\ Infinity;\ \});}
+\DoxyCodeLine{assert(!isWeakMap(Symbol('foo')));}
+\DoxyCodeLine{assert(!isWeakMap(1n));}
+\DoxyCodeLine{assert(!isWeakMap(Object(1n)));}
+\DoxyCodeLine{}
+\DoxyCodeLine{assert(!isWeakMap(new\ Set()));}
+\DoxyCodeLine{assert(!isWeakMap(new\ WeakSet()));}
+\DoxyCodeLine{assert(!isWeakMap(new\ Map()));}
+\DoxyCodeLine{}
+\DoxyCodeLine{assert(isWeakMap(new\ WeakMap()));}
+\DoxyCodeLine{}
+\DoxyCodeLine{class\ MyWeakMap\ extends\ WeakMap\ \{\}}
+\DoxyCodeLine{assert(isWeakMap(new\ MyWeakMap()));}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2is-weakmap_2README_autotoc_md16060}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2is-weakmap_2README_autotoc_md16060}
+Simply clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test} 

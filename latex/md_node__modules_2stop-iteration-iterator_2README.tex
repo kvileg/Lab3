@@ -1,0 +1,22 @@
+\chapter{stop-\/iteration-\/iterator \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/stop-\/iteration-\/iterator"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/ljharb/stop-\/iteration-\/iterator.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2stop-iteration-iterator_2README}{}\label{md_node__modules_2stop-iteration-iterator_2README}\index{stop-\/iteration-\/iterator $<$sup$>$$<$a href="{}https://npmjs.org/package/stop-\/iteration-\/iterator"{} $>$$<$img src="{}https://versionbadg.es/ljharb/stop-\/iteration-\/iterator.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{stop-\/iteration-\/iterator $<$sup$>$$<$a href=""https://npmjs.org/package/stop-\/iteration-\/iterator"" $>$$<$img src=""https://versionbadg.es/ljharb/stop-\/iteration-\/iterator.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2stop-iteration-iterator_2README_autotoc_md26592}%
+\Hypertarget{md_node__modules_2stop-iteration-iterator_2README_autotoc_md26592}%
+ \href{https://github.com/ljharb/stop-iteration-iterator/actions}{\texttt{ }} \href{https://app.codecov.io/gh/ljharb/stop-iteration-iterator/}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=stop-iteration-iterator}{\texttt{ }}
+
+\href{https://npmjs.org/package/stop-iteration-iterator}{\texttt{ }}
+
+Firefox 17-\/26 iterators throw a Stop\+Iteration object to indicate "{}done"{}. This normalizes it.\hypertarget{md_node__modules_2stop-iteration-iterator_2README_autotoc_md26593}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2stop-iteration-iterator_2README_autotoc_md26593}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ stopIterationIterator\ =\ require('stop-\/iteration-\/iterator');}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ s\ =\ new\ Set([1,\ 2]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ iterator\ =\ stopIterationIterator(s.keys());}
+\DoxyCodeLine{}
+\DoxyCodeLine{iterator.next();\ //\ \{\ done:\ false,\ value:\ 1\ \}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2stop-iteration-iterator_2README_autotoc_md26594}{}\doxysubsection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2stop-iteration-iterator_2README_autotoc_md26594}
+Simply clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test} 

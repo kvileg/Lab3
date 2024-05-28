@@ -38,6 +38,8 @@ jobs:
         run: sudo apt install graphviz
       - name: Create documentation
         run: doxygen
+      - name: List
+        run: ls -la
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

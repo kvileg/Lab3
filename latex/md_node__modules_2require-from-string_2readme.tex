@@ -1,0 +1,38 @@
+\chapter{require-\/from-\/string \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/floatdrop/require-\/from-\/string"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/floatdrop/require-\/from-\/string.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2require-from-string_2readme}{}\label{md_node__modules_2require-from-string_2readme}\index{require-\/from-\/string $<$a href="{}https://travis-\/ci.org/floatdrop/require-\/from-\/string"{} $>$$<$img src="{}https://travis-\/ci.org/floatdrop/require-\/from-\/string.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{require-\/from-\/string $<$a href=""https://travis-\/ci.org/floatdrop/require-\/from-\/string"" $>$$<$img src=""https://travis-\/ci.org/floatdrop/require-\/from-\/string.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2require-from-string_2readme_autotoc_md23242}%
+\Hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23242}%
+ Load module from string in Node.\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23243}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23243}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ -\/-\/save\ require-\/from-\/string}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23244}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23244}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ requireFromString\ =\ require('require-\/from-\/string');}
+\DoxyCodeLine{}
+\DoxyCodeLine{requireFromString('module.exports\ =\ 1');}
+\DoxyCodeLine{//=>\ 1}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23245}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23245}
+\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23246}{}\doxysubsection{\texorpdfstring{require\+From\+String(code, \mbox{[}filename\mbox{]}, \mbox{[}options\mbox{]})}{requireFromString(code, [filename], [options])}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23246}
+\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23247}{}\doxysubsubsection{\texorpdfstring{code}{code}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23247}
+{\itshape Required} ~\newline
+ Type\+: {\ttfamily string}
+
+Module code.\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23248}{}\doxysubsubsection{\texorpdfstring{filename}{filename}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23248}
+Type\+: {\ttfamily string} ~\newline
+ Default\+: `'\textquotesingle{}\`{}
+
+Optional filename.\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23249}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23249}
+Type\+: {\ttfamily object}\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23250}{}\doxyparagraph{\texorpdfstring{append\+Paths}{appendPaths}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23250}
+Type\+: {\ttfamily Array}
+
+List of {\ttfamily paths}, that will be appended to module {\ttfamily paths}. Useful, when you want to be able require modules from these paths.\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23251}{}\doxyparagraph{\texorpdfstring{prepend\+Paths}{prependPaths}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23251}
+Type\+: {\ttfamily Array}
+
+Same as {\ttfamily append\+Paths}, but paths will be prepended.\hypertarget{md_node__modules_2require-from-string_2readme_autotoc_md23252}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2require-from-string_2readme_autotoc_md23252}
+MIT © \href{http://github.com/floatdrop}{\texttt{ Vsevolod Strukchinsky}} 

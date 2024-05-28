@@ -1,0 +1,47 @@
+\chapter{define-\/lazy-\/prop \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/sindresorhus/define-\/lazy-\/prop"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/sindresorhus/define-\/lazy-\/prop.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2define-lazy-prop_2readme}{}\label{md_node__modules_2define-lazy-prop_2readme}\index{define-\/lazy-\/prop $<$a href="{}https://travis-\/ci.org/sindresorhus/define-\/lazy-\/prop"{} $>$$<$img src="{}https://travis-\/ci.org/sindresorhus/define-\/lazy-\/prop.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{define-\/lazy-\/prop $<$a href=""https://travis-\/ci.org/sindresorhus/define-\/lazy-\/prop"" $>$$<$img src=""https://travis-\/ci.org/sindresorhus/define-\/lazy-\/prop.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9346}%
+\Hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9346}%
+ \begin{quote}
+Define a \href{https://en.wikipedia.org/wiki/Lazy_evaluation}{\texttt{ lazily evaluated}} property on an object \end{quote}
+Useful when the value of a property is expensive to generate, so you want to delay the computation until the property is needed. For example, improving startup performance by deferring nonessential operations.\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9347}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9347}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ define-\/lazy-\/prop}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9348}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9348}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ defineLazyProp\ =\ require('define-\/lazy-\/prop');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ unicorn\ =\ \{}
+\DoxyCodeLine{\ \ \ \ //\ …}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{defineLazyProp(unicorn,\ 'rainbow',\ ()\ =>\ expensiveComputation());}
+\DoxyCodeLine{}
+\DoxyCodeLine{app.on('user-\/action',\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ doSomething(unicorn.rainbow);}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9349}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9349}
+\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9350}{}\doxysubsection{\texorpdfstring{define\+Lazy\+Prop(object, property\+Name, fn)}{defineLazyProp(object, propertyName, fn)}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9350}
+\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9351}{}\doxysubsubsection{\texorpdfstring{object}{object}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9351}
+Type\+: {\ttfamily Object}
+
+Object to add property to.\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9352}{}\doxysubsubsection{\texorpdfstring{property\+Name}{propertyName}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9352}
+Type\+: {\ttfamily string}
+
+Name of the property to add.\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9353}{}\doxysubsubsection{\texorpdfstring{fn}{fn}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9353}
+Type\+: {\ttfamily Function}
+
+Called the first time {\ttfamily property\+Name} is accessed. Expected to return a value.\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9354}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9354}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/lazy-value}{\texttt{ lazy-\/value}} -\/ Create a lazily evaluated value
+\item \href{https://github.com/sindresorhus/import-lazy}{\texttt{ import-\/lazy}} -\/ Import a module lazily
+\item \href{https://github.com/sindresorhus/p-lazy}{\texttt{ p-\/lazy}} -\/ Create a lazy promise
+\end{DoxyItemize}\hypertarget{md_node__modules_2define-lazy-prop_2readme_autotoc_md9355}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2define-lazy-prop_2readme_autotoc_md9355}
+MIT © \href{https://sindresorhus.com}{\texttt{ Sindre Sorhus}} 

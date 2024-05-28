@@ -1,0 +1,52 @@
+\chapter{Reg\+JSParser}
+\hypertarget{md_node__modules_2regjsparser_2README}{}\label{md_node__modules_2regjsparser_2README}\index{RegJSParser@{RegJSParser}}
+\label{md_node__modules_2regjsparser_2README_autotoc_md23188}%
+\Hypertarget{md_node__modules_2regjsparser_2README_autotoc_md23188}%
+ Parsing the Java\+Script\textquotesingle{}s Reg\+Exp in Java\+Script.\hypertarget{md_node__modules_2regjsparser_2README_autotoc_md23189}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2regjsparser_2README_autotoc_md23189}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ regjsparser}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2regjsparser_2README_autotoc_md23190}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2regjsparser_2README_autotoc_md23190}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ parse\ =\ require('regjsparser').parse;}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ parseTree\ =\ parse('\string^a');\ //\ /\string^a/}
+\DoxyCodeLine{console.log(parseTree);}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Toggle\ on/off\ additional\ features:}
+\DoxyCodeLine{var\ parseTree\ =\ parse('\string^a',\ '',\ \{}
+\DoxyCodeLine{\ \ //\ SEE:\ https://github.com/jviereck/regjsparser/pull/78}
+\DoxyCodeLine{\ \ unicodePropertyEscape:\ true,}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ //\ SEE:\ https://github.com/jviereck/regjsparser/pull/83}
+\DoxyCodeLine{\ \ namedGroups:\ true,}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ //\ SEE:\ https://github.com/jviereck/regjsparser/pull/89}
+\DoxyCodeLine{\ \ lookbehind:\ true}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{console.log(parseTree);}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2regjsparser_2README_autotoc_md23191}{}\doxysection{\texorpdfstring{Testing}{Testing}}\label{md_node__modules_2regjsparser_2README_autotoc_md23191}
+To run the tests, run the following command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ test}
+
+\end{DoxyCode}
+
+
+To create a new reference file, execute…
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{node\ test/update-\/fixtures.js}
+
+\end{DoxyCode}
+
+
+…from the repo top directory. 

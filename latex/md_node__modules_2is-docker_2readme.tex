@@ -1,0 +1,31 @@
+\chapter{is-\/docker}
+\hypertarget{md_node__modules_2is-docker_2readme}{}\label{md_node__modules_2is-docker_2readme}\index{is-\/docker@{is-\/docker}}
+\label{md_node__modules_2is-docker_2readme_autotoc_md15726}%
+\Hypertarget{md_node__modules_2is-docker_2readme_autotoc_md15726}%
+ \begin{quote}
+Check if the process is running inside a Docker container \end{quote}
+\hypertarget{md_node__modules_2is-docker_2readme_autotoc_md15727}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2is-docker_2readme_autotoc_md15727}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ is-\/docker}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2is-docker_2readme_autotoc_md15728}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2is-docker_2readme_autotoc_md15728}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ isDocker\ =\ require('is-\/docker');}
+\DoxyCodeLine{}
+\DoxyCodeLine{if\ (isDocker())\ \{}
+\DoxyCodeLine{\ \ \ \ console.log('Running\ inside\ a\ Docker\ container');}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2is-docker_2readme_autotoc_md15729}{}\doxysection{\texorpdfstring{CLI}{CLI}}\label{md_node__modules_2is-docker_2readme_autotoc_md15729}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ is-\/docker}
+
+\end{DoxyCode}
+
+
+Exits with code 0 if inside a Docker container and 2 if not. 

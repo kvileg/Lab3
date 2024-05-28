@@ -1,0 +1,101 @@
+\chapter{\texorpdfstring{$<$}{<}a href="{}http\+://dperini.\+github.\+io/nwsapi/"{} \texorpdfstring{$>$}{>}NWSAPI\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2nwsapi_2README}{}\label{md_node__modules_2nwsapi_2README}\index{$<$a href="{}http://dperini.github.io/nwsapi/"{} $>$NWSAPI$<$/a$>$@{$<$a href=""http://dperini.github.io/nwsapi/"" $>$NWSAPI$<$/a$>$}}
+\label{md_node__modules_2nwsapi_2README_autotoc_md19746}%
+\Hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19746}%
+ Fast CSS Selectors API Engine
+
+   
+
+NWSAPI is the development progress of \href{https://github.com/dperini/nwmatcher}{\texttt{ NWMATCHER}} aiming at \href{https://www.w3.org/TR/selectors-4/}{\texttt{ Selectors Level 4}} conformance. It has been completely reworked to be easily extended and maintained. It is a right-\/to-\/left selector parser and compiler written in pure Javascript with no external dependencies. It was initially thought as a cross browser library to improve event delegation and web page scraping in various frameworks but it has become a popular replacement of the native CSS selection and matching functionality in newer browsers and headless environments.
+
+It uses \href{https://en.wikipedia.org/wiki/Regular_expression}{\texttt{ regular expressions}} to parse CSS selector strings and \href{https://en.wikipedia.org/wiki/Metaprogramming}{\texttt{ metaprogramming}} to transforms these selector strings into Javascript function resolvers. This process is executed only once for each selector string allowing memoization of the function resolvers and achieving unmatched performances.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19747}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2nwsapi_2README_autotoc_md19747}
+To include NWSAPI in a standard web page\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<script\ type="{}text/javascript"{}\ src="{}nwsapi.js"{}></script>}
+
+\end{DoxyCode}
+
+
+To include NWSAPI in a standard web page and automatically replace the native QSA\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<script\ type="{}text/javascript"{}\ src="{}nwsapi.js"{}\ onload="{}NW.Dom.install()"{}></script>}
+
+\end{DoxyCode}
+
+
+To use NWSAPI with Node.\+js\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ nwsapi}
+
+\end{DoxyCode}
+
+
+NWSAPI currently supports browsers (as a global, {\ttfamily NW.\+Dom}) and headless environments (as a Common\+JS module).\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19748}{}\doxysection{\texorpdfstring{Supported Selectors}{Supported Selectors}}\label{md_node__modules_2nwsapi_2README_autotoc_md19748}
+Here is a list of all the CSS2/\+CSS3/\+CSS4 \href{https://github.com/dperini/nwsapi/wiki/CSS-supported-selectors}{\texttt{ Supported selectors}}.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19749}{}\doxysection{\texorpdfstring{Features and Compliance}{Features and Compliance}}\label{md_node__modules_2nwsapi_2README_autotoc_md19749}
+You can read more about NWSAPI \href{https://github.com/dperini/nwsapi/wiki/Features-and-compliance}{\texttt{ features and compliance}} on the wiki.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19750}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2nwsapi_2README_autotoc_md19750}
+\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19751}{}\doxysubsection{\texorpdfstring{DOM Selection}{DOM Selection}}\label{md_node__modules_2nwsapi_2README_autotoc_md19751}
+\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19752}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$ancestor( selector, context, callback )$<$/tt$>$}{<tt>ancestor( selector, context, callback )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19752}
+Returns a reference to the nearest ancestor element matching {\ttfamily selector}, starting at {\ttfamily context}. Returns {\ttfamily null} if no element is found. If {\ttfamily callback} is provided, it is invoked for the matched element.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19753}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$first( selector, context, callback )$<$/tt$>$}{<tt>first( selector, context, callback )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19753}
+Returns a reference to the first element matching {\ttfamily selector}, starting at {\ttfamily context}. Returns {\ttfamily null} if no element matches. If {\ttfamily callback} is provided, it is invoked for the matched element.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19754}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$match( selector, element, callback )$<$/tt$>$}{<tt>match( selector, element, callback )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19754}
+Returns {\ttfamily true} if {\ttfamily element} matches {\ttfamily selector}, starting at {\ttfamily context}; returns {\ttfamily false} otherwise. If {\ttfamily callback} is provided, it is invoked for the matched element.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19755}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$select( selector, context, callback )$<$/tt$>$}{<tt>select( selector, context, callback )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19755}
+Returns an array of all the elements matching {\ttfamily selector}, starting at {\ttfamily context}; returns empty {\ttfamily Array} otherwise. If {\ttfamily callback} is provided, it is invoked for each matching element.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19756}{}\doxysubsection{\texorpdfstring{DOM Helpers}{DOM Helpers}}\label{md_node__modules_2nwsapi_2README_autotoc_md19756}
+\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19757}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$by\+Id( id, from )$<$/tt$>$}{<tt>byId( id, from )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19757}
+Returns a reference to the first element with ID {\ttfamily id}, optionally filtered to descendants of the element {\ttfamily from}.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19758}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$by\+Tag( tag, from )$<$/tt$>$}{<tt>byTag( tag, from )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19758}
+Returns an array of elements having the specified tag name {\ttfamily tag}, optionally filtered to descendants of the element {\ttfamily from}.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19759}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$by\+Class( class, from )$<$/tt$>$}{<tt>byClass( class, from )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19759}
+Returns an array of elements having the specified class name {\ttfamily class}, optionally filtered to descendants of the element {\ttfamily from}.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19760}{}\doxysubsection{\texorpdfstring{Engine Configuration}{Engine Configuration}}\label{md_node__modules_2nwsapi_2README_autotoc_md19760}
+\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19761}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$configure( options )$<$/tt$>$}{<tt>configure( options )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19761}
+The following is the list of currently available configuration options, their default values and descriptions, they are boolean flags that can be set to {\ttfamily true} or {\ttfamily false}\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily IDS\+\_\+\+DUPES}\+: true -\/ true to allow using multiple elements having the same id, false to disallow
+\item {\ttfamily LIVECACHE}\+: true -\/ true for caching both results and resolvers, false for caching only resolvers
+\item {\ttfamily MIXEDCASE}\+: true -\/ true to match tag names case insensitive, false to match using case sensitive
+\item {\ttfamily LOGERRORS}\+: true -\/ true to print errors and warnings to the console, false to mute both of them
+\end{DoxyItemize}\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19762}{}\doxysubsection{\texorpdfstring{Examples on extending the basic functionalities}{Examples on extending the basic functionalities}}\label{md_node__modules_2nwsapi_2README_autotoc_md19762}
+\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19763}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$configure( \{ $<$configuration-\/flag$>$\+: \mbox{[} true \texorpdfstring{$\vert$}{|} false \mbox{]} \} )$<$/tt$>$}{<tt>configure( \{ <configuration-flag>: [ true | false ] \} )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19763}
+Disable logging errors/warnings to console, disallow duplicate ids. Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{NW.Dom.configure(\ \{\ LOGERRORS:\ false,\ IDS\_DUPES:\ false\ \}\ );}
+
+\end{DoxyCode}
+ NOTE\+: NW.\+Dom.\+configure() without parameters return the current configuration.\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19764}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$register\+Combinator( symbol, resolver )$<$/tt$>$}{<tt>registerCombinator( symbol, resolver )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19764}
+Registers a new symbol and its matching resolver in the combinators table. Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{NW.Dom.registerCombinator(\ '\string^',\ 'e.parentElement'\ );}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19765}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$register\+Operator( symbol, resolver )$<$/tt$>$}{<tt>registerOperator( symbol, resolver )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19765}
+Registers a new symbol and its matching resolver in the attribute operators table. Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{NW.Dom.registerOperator(\ '!=',\ \{\ p1:\ '\string^',\ p2:\ '\$',\ p3:\ 'false'\ \}\ );}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2nwsapi_2README_autotoc_md19766}{}\doxysubsubsection{\texorpdfstring{$<$tt$>$register\+Selector( name, rexp, func )$<$/tt$>$}{<tt>registerSelector( name, rexp, func )</tt>}}\label{md_node__modules_2nwsapi_2README_autotoc_md19766}
+Registers a new selector, the matching RE and the resolver function, in the selectors table. Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{NW.Dom.registerSelector('Controls',\ /\string^\(\backslash\):(control)(.*)/i,}
+\DoxyCodeLine{\ \ (function(global)\ \{}
+\DoxyCodeLine{\ \ \ \ return\ function(match,\ source,\ mode,\ callback)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ var\ status\ =\ true;}
+\DoxyCodeLine{\ \ \ \ \ \ source\ =\ 'if(/\string^(button|input|select|textarea)/i.test(e.nodeName))\{'\ +\ source\ +\ '\}';}
+\DoxyCodeLine{\ \ \ \ \ \ return\ \{\ 'source':\ source,\ 'status':\ status\ \};}
+\DoxyCodeLine{\ \ \ \ \};}
+\DoxyCodeLine{\ \ \})(this));}
+
+\end{DoxyCode}
+ 

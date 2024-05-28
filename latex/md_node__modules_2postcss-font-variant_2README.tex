@@ -1,0 +1,74 @@
+\chapter{Post\+CSS Font-\/\+Variant \texorpdfstring{$<$}{<}a href="{}https\+://github.\+com/postcss/postcss/"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src=\textbackslash{}"{}https\+://postcss.\+github.\+io/postcss/logo.\+svg\textbackslash{}"{} alt=\textbackslash{}"{}\+Post\+CSS Logo\textbackslash{}"{} width=\textbackslash{}"{}90\textbackslash{}"{} height=\textbackslash{}"{}90\textbackslash{}"{} align=\textbackslash{}"{}right\textbackslash{}"{}\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2postcss-font-variant_2README}{}\label{md_node__modules_2postcss-font-variant_2README}\index{PostCSS Font-\/Variant $<$a href="{}https://github.com/postcss/postcss/"{} $>$$<$img src=\textbackslash{}"{}https://postcss.github.io/postcss/logo.svg\textbackslash{}"{} alt=\textbackslash{}"{}PostCSS Logo\textbackslash{}"{} width=\textbackslash{}"{}90\textbackslash{}"{} height=\textbackslash{}"{}90\textbackslash{}"{} align=\textbackslash{}"{}right\textbackslash{}"{}$>$$<$/a$>$@{PostCSS Font-\/Variant $<$a href=""https://github.com/postcss/postcss/"" $>$$<$img src=\textbackslash{}""https://postcss.github.io/postcss/logo.svg\textbackslash{}"" alt=\textbackslash{}""PostCSS Logo\textbackslash{}"" width=\textbackslash{}""90\textbackslash{}"" height=\textbackslash{}""90\textbackslash{}"" align=\textbackslash{}""right\textbackslash{}""$>$$<$/a$>$}}
+\label{md_node__modules_2postcss-font-variant_2README_autotoc_md21101}%
+\Hypertarget{md_node__modules_2postcss-font-variant_2README_autotoc_md21101}%
+ \href{https://cssdb.org/\#font-variant-property}{\texttt{ }} \href{https://travis-ci.org/postcss/postcss-font-variant}{\texttt{ }}
+
+Post\+CSS Font-\/\+Variant lets you use {\ttfamily font-\/variant} in CSS, following the \href{https://www.w3.org/TR/css-fonts-3/\#font-variant-prop}{\texttt{ CSS Fonts}} specification.\hypertarget{md_node__modules_2postcss-font-variant_2README_autotoc_md21102}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2postcss-font-variant_2README_autotoc_md21102}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ postcss-\/font-\/variant}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-font-variant_2README_autotoc_md21103}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2postcss-font-variant_2README_autotoc_md21103}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ dependencies}
+\DoxyCodeLine{var\ postcss\ =\ require("{}postcss"{})}
+\DoxyCodeLine{var\ fontVariant\ =\ require("{}postcss-\/font-\/variant"{})}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ css\ to\ be\ processed}
+\DoxyCodeLine{var\ css\ =\ fs.readFileSync("{}input.css"{},\ "{}utf8"{})}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ process\ css\ using\ postcss-\/font-\/variant}
+\DoxyCodeLine{var\ out\ =\ postcss()}
+\DoxyCodeLine{\ \ .use(fontVariant())}
+\DoxyCodeLine{\ \ .process(css)}
+\DoxyCodeLine{\ \ .css}
+
+\end{DoxyCode}
+
+
+Using this {\ttfamily input.\+css}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{h2\ \{}
+\DoxyCodeLine{\ \ font-\/variant-\/caps:\ small-\/caps;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{table\ \{}
+\DoxyCodeLine{\ \ font-\/variant-\/numeric:\ lining-\/nums;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+you will get\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{h2\ \{}
+\DoxyCodeLine{\ \ font-\/feature-\/settings:\ "{}smcp"{};}
+\DoxyCodeLine{\ \ font-\/variant-\/caps:\ small-\/caps;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{table\ \{}
+\DoxyCodeLine{\ \ font-\/feature-\/settings:\ "{}lnum"{};}
+\DoxyCodeLine{\ \ font-\/variant-\/numeric:\ lining-\/nums;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Checkout \mbox{[}tests\mbox{]}(test) for more examples.
+
+\DoxyHorRuler{0}
+\hypertarget{md_node__modules_2postcss-font-variant_2README_autotoc_md21105}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{md_node__modules_2postcss-font-variant_2README_autotoc_md21105}
+Work on a branch, install dev-\/dependencies, respect coding style \& run tests before submitting a bug fix or a feature. \begin{DoxyVerb}$ git clone https://github.com/postcss/postcss-font-variant.git
+$ git checkout -b patch-1
+$ npm install
+$ npm test
+\end{DoxyVerb}
+ \hypertarget{md_node__modules_2postcss-font-variant_2README_autotoc_md21106}{}\doxysection{\texorpdfstring{@ref "{}/home/step/\+Lab3\+\_\+4/node\+\_\+modules/postcss-\/font-\/variant/\+CHANGELOG.\+md"{} "{}\+Changelog"{}}{@ref "/home/step/Lab3\_4/node\_modules/postcss-font-variant/CHANGELOG.md" "Changelog"}}\label{md_node__modules_2postcss-font-variant_2README_autotoc_md21106}
+\hypertarget{md_node__modules_2postcss-font-variant_2README_autotoc_md21107}{}\doxysection{\texorpdfstring{\mbox{[}\+License\mbox{]}(\+LICENSE)}{[License](LICENSE)}}\label{md_node__modules_2postcss-font-variant_2README_autotoc_md21107}

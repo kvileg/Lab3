@@ -1,0 +1,31 @@
+\chapter{is-\/set \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/is-\/set"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/inspect-\/js/is-\/set.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2is-set_2README}{}\label{md_node__modules_2is-set_2README}\index{is-\/set $<$sup$>$$<$a href="{}https://npmjs.org/package/is-\/set"{} $>$$<$img src="{}https://versionbadg.es/inspect-\/js/is-\/set.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{is-\/set $<$sup$>$$<$a href=""https://npmjs.org/package/is-\/set"" $>$$<$img src=""https://versionbadg.es/inspect-\/js/is-\/set.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2is-set_2README_autotoc_md15955}%
+\Hypertarget{md_node__modules_2is-set_2README_autotoc_md15955}%
+ \href{https://github.com/inspect-js/is-set/actions}{\texttt{ }} \href{https://app.codecov.io/gh/inspect-js/is-set/}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=is-set}{\texttt{ }}
+
+\href{https://npmjs.org/package/is-set}{\texttt{ }}
+
+Is this value a JS Set? This module works cross-\/realm/iframe, and despite ES6 @to\+String\+Tag.\hypertarget{md_node__modules_2is-set_2README_autotoc_md15956}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2is-set_2README_autotoc_md15956}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ isSet\ =\ require('is-\/set');}
+\DoxyCodeLine{assert(!isSet(function\ ()\ \{\}));}
+\DoxyCodeLine{assert(!isSet(null));}
+\DoxyCodeLine{assert(!isSet(function*\ ()\ \{\ yield\ 42;\ return\ Infinity;\ \});}
+\DoxyCodeLine{assert(!isSet(Symbol('foo')));}
+\DoxyCodeLine{assert(!isSet(1n));}
+\DoxyCodeLine{assert(!isSet(Object(1n)));}
+\DoxyCodeLine{}
+\DoxyCodeLine{assert(!isSet(new\ Map()));}
+\DoxyCodeLine{assert(!isSet(new\ WeakSet()));}
+\DoxyCodeLine{assert(!isSet(new\ WeakMap()));}
+\DoxyCodeLine{}
+\DoxyCodeLine{assert(isSet(new\ Set()));}
+\DoxyCodeLine{}
+\DoxyCodeLine{class\ MySet\ extends\ Set\ \{\}}
+\DoxyCodeLine{assert(isSet(new\ MySet()));}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2is-set_2README_autotoc_md15957}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2is-set_2README_autotoc_md15957}
+Simply clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test} 

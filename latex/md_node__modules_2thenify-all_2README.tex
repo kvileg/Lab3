@@ -1,0 +1,41 @@
+\chapter{thenify-\/all}
+\hypertarget{md_node__modules_2thenify-all_2README}{}\label{md_node__modules_2thenify-all_2README}\index{thenify-\/all@{thenify-\/all}}
+\label{md_node__modules_2thenify-all_2README_autotoc_md28335}%
+\Hypertarget{md_node__modules_2thenify-all_2README_autotoc_md28335}%
+ \href{https://npmjs.org/package/thenify-all}{\texttt{ }} \href{https://travis-ci.org/thenables/thenify-all}{\texttt{ }} \href{https://coveralls.io/r/thenables/thenify-all}{\texttt{ }} \href{https://david-dm.org/thenables/thenify-all}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npmjs.org/package/thenify-all}{\texttt{ }} \href{https://gratipay.com/jonathanong/}{\texttt{ }}
+
+Promisifies all the selected functions in an object.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ thenifyAll\ =\ require('thenify-\/all');}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ fs\ =\ thenifyAll(require('fs'),\ \{\},\ [}
+\DoxyCodeLine{\ \ 'readFile',}
+\DoxyCodeLine{\ \ 'writeFile',}
+\DoxyCodeLine{]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{fs.readFile(\_\_filename).then(function\ (buffer)\ \{}
+\DoxyCodeLine{\ \ console.log(buffer.toString());}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2thenify-all_2README_autotoc_md28336}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2thenify-all_2README_autotoc_md28336}
+\hypertarget{md_node__modules_2thenify-all_2README_autotoc_md28337}{}\doxysubsection{\texorpdfstring{var obj = thenify\+All(source, \mbox{[}obj\mbox{]}, \mbox{[}methods\mbox{]})}{var obj = thenifyAll(source, [obj], [methods])}}\label{md_node__modules_2thenify-all_2README_autotoc_md28337}
+Promisifies all the selected functions in an object.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily source} -\/ the source object for the async functions
+\item {\ttfamily obj} -\/ the destination to set all the promisified methods
+\item {\ttfamily methods} -\/ an array of method names of {\ttfamily source}
+\end{DoxyItemize}\hypertarget{md_node__modules_2thenify-all_2README_autotoc_md28338}{}\doxysubsection{\texorpdfstring{var obj = thenify\+All.\+with\+Callback(source, \mbox{[}obj\mbox{]}, \mbox{[}methods\mbox{]})}{var obj = thenifyAll.withCallback(source, [obj], [methods])}}\label{md_node__modules_2thenify-all_2README_autotoc_md28338}
+Promisifies all the selected functions in an object and backward compatible with callback.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily source} -\/ the source object for the async functions
+\item {\ttfamily obj} -\/ the destination to set all the promisified methods
+\item {\ttfamily methods} -\/ an array of method names of {\ttfamily source}
+\end{DoxyItemize}\hypertarget{md_node__modules_2thenify-all_2README_autotoc_md28339}{}\doxysubsection{\texorpdfstring{thenify\+All.\+thenify}{thenifyAll.thenify}}\label{md_node__modules_2thenify-all_2README_autotoc_md28339}
+Exports \href{https://github.com/thenables/thenify}{\texttt{ thenify}} this package uses. 

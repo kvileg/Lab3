@@ -1,0 +1,27 @@
+\chapter{char-\/regex}
+\hypertarget{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme}{}\label{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme}\index{char-\/regex@{char-\/regex}}
+\label{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme_autotoc_md17893}%
+\Hypertarget{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme_autotoc_md17893}%
+ A regex to match any full character, considering weird character ranges. Tested on every single emoji and unicode character. Based on the Lodash implementation.\hypertarget{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme_autotoc_md17894}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme_autotoc_md17894}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ char-\/regex}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme_autotoc_md17895}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme_autotoc_md17895}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ charRegex\ from\ 'char-\/regex';}
+\DoxyCodeLine{}
+\DoxyCodeLine{'❤️👊🏽'.match(/./);}
+\DoxyCodeLine{//=>\ ['',\ '',\ '',\ '',\ '',\ '',\ '']}
+\DoxyCodeLine{}
+\DoxyCodeLine{'❤️👊🏽'.match(charRegex());}
+\DoxyCodeLine{//=>\ ['❤️',\ '👊🏽']}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme_autotoc_md17896}{}\doxysection{\texorpdfstring{Related}{Related}}\label{md_node__modules_2jest-watch-typeahead_2node__modules_2string-length_2node__modules_2char-regex_2readme_autotoc_md17896}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/sindresorhus/string-length}{\texttt{ string-\/length}} -\/ Get the real length of a string 
+\end{DoxyItemize}

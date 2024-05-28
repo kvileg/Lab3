@@ -1,0 +1,294 @@
+\chapter{Change Log}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG}{}\label{md_node__modules_2tsconfig-paths_2CHANGELOG}\index{Change Log@{Change Log}}
+\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28504}%
+\Hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28504}%
+ All notable changes to this project will be documented in this file.
+
+The format is based on \href{http://keepachangelog.com/}{\texttt{ Keep a Changelog}} and this project adheres to \href{http://semver.org/}{\texttt{ Semantic Versioning}}.\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28505}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/v3.\+9.\+0...\+master"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/v3.9.0...master"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28505}
+\texorpdfstring{$>$}{>}Unreleased\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28506}{}\doxysection{\texorpdfstring{\mbox{[}3.\+15.\+0\mbox{]} -\/ 2023-\/12-\/14}{[3.15.0] - 2023-12-14}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28506}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28507}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28507}
+
+\begin{DoxyItemize}
+\item Add support for extends as array of strings to v3 (backport of \#245). See PR \#260. Thanks to \href{https://github.com/domdomegg}{\texttt{ @domdomegg}} for this PR!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28508}{}\doxysection{\texorpdfstring{\mbox{[}3.\+14.\+1\mbox{]} -\/ 2022-\/03-\/22}{[3.14.1] - 2022-03-22}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28508}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28509}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28509}
+
+\begin{DoxyItemize}
+\item Use minimist 1.\+2.\+6 for all depencencies becuase of pollution vulnerability. See PR \href{https://github.com/dividab/tsconfig-paths/pull/197}{\texttt{ \#197}}. Thanks to \href{https://github.com/gopijaganthan}{\texttt{ @gopijaganthan}} for this fix!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28510}{}\doxysection{\texorpdfstring{\mbox{[}3.\+14.\+0\mbox{]} -\/ 2022-\/03-\/13}{[3.14.0] - 2022-03-13}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28510}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28511}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28511}
+
+\begin{DoxyItemize}
+\item Support for path mapping starting with {\ttfamily /}. See PR \href{https://github.com/dividab/tsconfig-paths/pull/180}{\texttt{ \#180}}, issue \href{https://github.com/dividab/tsconfig-paths/issues/113}{\texttt{ \#113}}, and issue \href{https://github.com/dividab/tsconfig-paths/issues/128}{\texttt{ \#128}}. Thanks to \href{https://github.com/benevbright}{\texttt{ @benevbright}} for this fix!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28512}{}\doxysection{\texorpdfstring{\mbox{[}3.\+13.\+0\mbox{]} -\/ 2022-\/03-\/03}{[3.13.0] - 2022-03-03}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28512}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28513}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28513}
+
+\begin{DoxyItemize}
+\item Include file extension in paths resolved from package.\+json "{}main"{} field. See PR \href{https://github.com/dividab/tsconfig-paths/pull/135}{\texttt{ \#135}} and issue \href{https://github.com/dividab/tsconfig-paths/issues/133}{\texttt{ \#133}}. Thanks to \href{https://github.com/katywings}{\texttt{ @katywings}} for this fix!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28514}{}\doxysection{\texorpdfstring{\mbox{[}3.\+12.\+0\mbox{]} -\/ 2021-\/08-\/24}{[3.12.0] - 2021-08-24}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28514}
+
+\begin{DoxyItemize}
+\item Add support for base\+Url override using TS\+\_\+\+NODE\+\_\+\+BASEURL env var \#185 and \#114. Thanks to @ejhayes and @information-\/security for these PRs!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28515}{}\doxysection{\texorpdfstring{\mbox{[}3.\+11.\+0\mbox{]} -\/ 2021-\/08-\/24}{[3.11.0] - 2021-08-24}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28515}
+
+\begin{DoxyItemize}
+\item Reverted upgrade of json5 due to being a breaking change. See PR \#173.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28516}{}\doxysection{\texorpdfstring{\mbox{[}3.\+10.\+1\mbox{]} -\/ 2021-\/07-\/06}{[3.10.1] - 2021-07-06}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28516}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28517}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28517}
+
+\begin{DoxyItemize}
+\item Add register.\+js to published files
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28518}{}\doxysection{\texorpdfstring{\mbox{[}3.\+10.\+0\mbox{]} -\/ 2021-\/07-\/06}{[3.10.0] - 2021-07-06}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28518}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28519}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28519}
+
+\begin{DoxyItemize}
+\item feat(tsconfig-\/loader)\+: extends config from node\+\_\+modules (\#106). Thanks to @zorji for this PR!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28520}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28520}
+
+\begin{DoxyItemize}
+\item Update CHANGELOG.\+md (\#96). Thanks to @\+Oliver\+JAsh for this PR!
+\item Fix "{}bootstraping"{} typo (\#111). Thanks to @\+KRMisha for this PR!
+\item Update Readme fixes \#116 (\#123). Thanks to @benwinding for this PR!
+\item Fixed typo (\#144). Thanks to @mprinc for this PR!
+\item \mbox{[}TYPO\mbox{]} src/mapping-\/entry.\+ts (\#145). Thanks to @mprinc for this PR!
+\item docs(\+README)\+: fix typos (\#156). Thanks to @\+Pi\+Delport for this PR!
+\item deps\+: bump json5 to use type definition provided officially (\#158). Thanks to @koba04 for this PR!
+\item Update tsconfig-\/loader.\+ts (\#161). Thanks to @fecqs for this PR!
+\item fix typo (\#165). Thanks to @wonda-\/tea-\/coffee for this PR!
+\item Add file extenstion to typings property value (\#151). Thanks to @dangrussell for this PR!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28521}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/v3.\+8.\+0...\+v3.\+9.\+0"{} $>$3.\+9.\+0$<$/a$>$ -\/ 2019-\/09-\/12}{<a href="https://github.com/dividab/tsconfig-paths/compare/v3.8.0...v3.9.0" >3.9.0</a> - 2019-09-12}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28521}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28522}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28522}
+
+\begin{DoxyItemize}
+\item Make extension config override instead of deep merge. See PR \href{https://github.com/dividab/tsconfig-paths/pull/95}{\texttt{ \#95}} and issue \href{https://github.com/dividab/tsconfig-paths/issues/94}{\texttt{ \#94}}. Thanks to \href{https://github.com/OliverJAsh}{\texttt{ @\+Oliver\+JAsh}} for this addition!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28523}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+7.\+0...\+3.\+8.\+0"{} $>$3.\+8.\+0$<$/a$>$ -\/ 2019-\/02-\/05}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.7.0...3.8.0" >3.8.0</a> - 2019-02-05}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28523}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28524}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28524}
+
+\begin{DoxyItemize}
+\item Add option to avoid adding a match-\/all rule. See PR \href{https://github.com/dividab/tsconfig-paths/pull/73}{\texttt{ \#73}} and issue \href{https://github.com/dividab/tsconfig-paths/issues/72}{\texttt{ 72}}. Thanks to \href{https://github.com/Swatinem}{\texttt{ @\+Swatinem}} for this addition!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28525}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+6.\+0...\+3.\+7.\+0"{} $>$3.\+7.\+0$<$/a$>$ -\/ 2018-\/11-\/11}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.6.0...3.7.0" >3.7.0</a> - 2018-11-11}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28525}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28526}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28526}
+
+\begin{DoxyItemize}
+\item Allow cleanup of register(). See PR \href{https://github.com/dividab/tsconfig-paths/pull/64}{\texttt{ \#64}} and issue \href{https://github.com/dividab/tsconfig-paths/issues/63}{\texttt{ 63}}. Thanks to \href{https://github.com/TylorS}{\texttt{ @\+TylorS}} for this addition!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28527}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+5.\+0...\+3.\+6.\+0"{} $>$3.\+6.\+0$<$/a$>$ -\/ 2018-\/09-\/10}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.5.0...3.6.0" >3.6.0</a> - 2018-09-10}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28527}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28528}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28528}
+
+\begin{DoxyItemize}
+\item Prefer Node\textquotesingle{}s core modules over file modules. See PR \href{https://github.com/dividab/tsconfig-paths/pull/60}{\texttt{ \#60}} and issue \href{https://github.com/dividab/tsconfig-paths/issues/56}{\texttt{ 56}}. Thanks to @ljani for this addition!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28529}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+4.\+2...\+3.\+5.\+0"{} $>$3.\+5.\+0$<$/a$>$ -\/ 2018-\/07-\/28}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.4.2...3.5.0" >3.5.0</a> - 2018-07-28}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28529}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28530}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28530}
+
+\begin{DoxyItemize}
+\item Add support for trailing commas in tsconfig.\+json (use JSON5 to parse). See issue \href{https://github.com/dividab/tsconfig-paths/issues/48}{\texttt{ \#48}}, and PR \href{https://github.com/dividab/tsconfig-paths/pull/58}{\texttt{ \#58}}. Thanks to \href{https://github.com/jshado1}{\texttt{ @jshado1}} for this addition!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28531}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+4.\+1...\+3.\+4.\+2"{} $>$3.\+4.\+2$<$/a$>$ -\/ 2018-\/06-\/30}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.4.1...3.4.2" >3.4.2</a> - 2018-06-30}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28531}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28532}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28532}
+
+\begin{DoxyItemize}
+\item Do not resolve directories, only files, sse issue \href{https://github.com/dividab/tsconfig-paths/issues/51}{\texttt{ \#51}}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28533}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+4.\+0...\+3.\+4.\+1"{} $>$3.\+4.\+1$<$/a$>$ -\/ 2018-\/06-\/24}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.4.0...3.4.1" >3.4.1</a> - 2018-06-24}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28533}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28534}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28534}
+
+\begin{DoxyItemize}
+\item Ignore field name mappings in package.\+json files that are not paths of existing files \href{https://github.com/dividab/tsconfig-paths/pull/45}{\texttt{ \#46}}. Thanks to \href{https://github.com/christoffer}{\texttt{ @christoffer}} for this fix!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28535}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+3.\+2...\+3.\+4.\+0"{} $>$3.\+4.\+0$<$/a$>$ -\/ 2018-\/06-\/12}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.3.2...3.4.0" >3.4.0</a> - 2018-06-12}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28535}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28536}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28536}
+
+\begin{DoxyItemize}
+\item Add support for providing a list of field names to try instead of just using "{}main"{}, \href{https://github.com/dividab/tsconfig-paths/pull/45}{\texttt{ \#45}}. Thanks to \href{https://github.com/christoffer-dropbox}{\texttt{ @christoffer-\/dropbox}} for this addition!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28537}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+3.\+1...\+3.\+3.\+2"{} $>$3.\+3.\+2$<$/a$>$ -\/ 2018-\/05-\/07}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.3.1...3.3.2" >3.3.2</a> - 2018-05-07}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28537}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28538}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28538}
+
+\begin{DoxyItemize}
+\item Adding json file extension to extends property, \href{https://github.com/dividab/tsconfig-paths/pull/40}{\texttt{ \#40}}. Thanks to \href{https://github.com/cwhite-connectfirst}{\texttt{ @cwhite-\/connectfirst}} for this fixing this!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28539}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+3.\+0...\+3.\+3.\+1"{} $>$3.\+3.\+1$<$/a$>$ -\/ 2018-\/04-\/17}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.3.0...3.3.1" >3.3.1</a> - 2018-04-17}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28539}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28540}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28540}
+
+\begin{DoxyItemize}
+\item Fix project undefined error when calling register, \href{https://github.com/dividab/tsconfig-paths/issues/37}{\texttt{ \#37}}. Thanks to \href{https://github.com/natedanner}{\texttt{ @natedanner}} for this fixing this!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28541}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+2.\+0...\+3.\+3.\+0"{} $>$3.\+3.\+0$<$/a$>$ -\/ 2018-\/04-\/14}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.2.0...3.3.0" >3.3.0</a> - 2018-04-14}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28541}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28542}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28542}
+
+\begin{DoxyItemize}
+\item Add possibility to indicate explicitly tsconfig location, \href{https://github.com/dividab/tsconfig-paths/issues/35}{\texttt{ \#35}}. Thanks to \href{https://github.com/procopenco}{\texttt{ @procopenco}} for this adding this!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28543}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+1.\+3...\+3.\+2.\+0"{} $>$3.\+2.\+0$<$/a$>$ -\/ 2018-\/03-\/31}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.1.3...3.2.0" >3.2.0</a> - 2018-03-31}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28543}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28544}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28544}
+
+\begin{DoxyItemize}
+\item Added support for passing a filename as cwd, see issue \href{https://github.com/dividab/tsconfig-paths/issues/31}{\texttt{ \#31}} and PR \href{https://github.com/dividab/tsconfig-paths/pull/32}{\texttt{ \#32}}. Thanks to \href{https://github.com/amodm}{\texttt{ @amodm}} for this adding this!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28545}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+1.\+2...\+3.\+1.\+3"{} $>$3.\+1.\+3$<$/a$>$ -\/ 2018-\/03-\/14}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.1.2...3.1.3" >3.1.3</a> - 2018-03-14}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28545}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28546}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28546}
+
+\begin{DoxyItemize}
+\item Fix async recursion, see \href{https://github.com/dividab/tsconfig-paths/pull/30}{\texttt{ \#30}}. Thanks to \href{https://github.com/Nayni}{\texttt{ @\+Nayni}} for this fix!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28547}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+1.\+1...\+3.\+1.\+2"{} $>$3.\+1.\+2$<$/a$>$ -\/ 2018-\/03-\/13}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.1.1...3.1.2" >3.1.2</a> - 2018-03-13}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28547}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28548}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28548}
+
+\begin{DoxyItemize}
+\item Fix a forgotten return when done\+Callback is invoked, see \href{https://github.com/dividab/tsconfig-paths/pull/29}{\texttt{ \#29}}. Thanks to \href{https://github.com/Nayni}{\texttt{ @\+Nayni}} for this fix!
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28549}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+1.\+0...\+3.\+1.\+1"{} $>$3.\+1.\+1$<$/a$>$ -\/ 2018-\/01-\/13}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.1.0...3.1.1" >3.1.1</a> - 2018-01-13}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28549}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28550}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28550}
+
+\begin{DoxyItemize}
+\item Fix read json async when it does not exist
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28551}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/3.\+0.\+0...\+3.\+1.\+0"{} $>$3.\+1.\+0$<$/a$>$ -\/ 2018-\/01-\/13}{<a href="https://github.com/dividab/tsconfig-paths/compare/3.0.0...3.1.0" >3.1.0</a> - 2018-01-13}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28551}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28552}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28552}
+
+\begin{DoxyItemize}
+\item Implement default async json reader function.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28553}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+7.\+3...\+3.\+0.\+0"{} $>$3.\+0.\+0$<$/a$>$ -\/ 2018-\/01-\/13}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.7.3...3.0.0" >3.0.0</a> - 2018-01-13}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28553}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28554}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28554}
+
+\begin{DoxyItemize}
+\item Remove parameter {\ttfamily absolute\+Source\+File\+Name} from the {\ttfamily Match\+Path} and {\ttfamily match\+From\+Absolute\+Paths} functions. It was not used internally.
+\item {\ttfamily match\+From\+Absolute\+Paths} now accepts a pre-\/sorted array of {\ttfamily Mapping\+Entry}s instead of a dictionary. This was done so the sorting could be done once which should give better performance.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28555}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28555}
+
+\begin{DoxyItemize}
+\item {\ttfamily create\+Match\+Path\+Async}, creates an async version of the {\ttfamily Match\+Path} function. Can be used for example by webpack plugins.
+\item {\ttfamily match\+From\+Absolute\+Paths\+Async}, async version of {\ttfamily match\+From\+Absolute\+Paths}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28556}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+7.\+2...\+2.\+7.\+3"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.7.2...2.7.3"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28556}
+\texorpdfstring{$>$}{>}2.\+7.\+3\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28557}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28557}
+
+\begin{DoxyItemize}
+\item Only resolve path if tsconfig present \href{https://github.com/dividab/tsconfig-paths/pull/25}{\texttt{ \#25}}. Thanks to @nicoschoenmaker for the PR.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28558}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+7.\+1...\+2.\+7.\+2"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.7.1...2.7.2"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28558}
+\texorpdfstring{$>$}{>}2.\+7.\+2\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28559}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28559}
+
+\begin{DoxyItemize}
+\item Return absolute path to tsconfig.\+json.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28560}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+7.\+0...\+2.\+7.\+1"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.7.0...2.7.1"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28560}
+\texorpdfstring{$>$}{>}2.\+7.\+1\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28561}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28561}
+
+\begin{DoxyItemize}
+\item Remove left over console.\+log.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28562}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+6.\+0...\+2.\+7.\+0"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.6.0...2.7.0"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28562}
+\texorpdfstring{$>$}{>}2.\+7.\+0\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28563}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28563}
+
+\begin{DoxyItemize}
+\item Support {\ttfamily base\+Url} to exist in base tsconfig.\+json when using {\ttfamily extends}, see \href{https://github.com/dividab/tsconfig-paths/issues/23}{\texttt{ \#23}}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28564}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+5.\+0...\+2.\+6.\+0"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.5.0...2.6.0"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28564}
+\texorpdfstring{$>$}{>}2.\+6.\+0\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28565}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28565}
+
+\begin{DoxyItemize}
+\item Add {\ttfamily base\+Url} and {\ttfamily config\+File\+Absolute\+Path} to the result of {\ttfamily load\+Config}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28566}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+4.\+3...\+2.\+5.\+0"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.4.3...2.5.0"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28566}
+\texorpdfstring{$>$}{>}2.\+5.\+0\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28567}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28567}
+
+\begin{DoxyItemize}
+\item New function in Programmatic API {\ttfamily load\+Config}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28568}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+4.\+2...\+2.\+4.\+3"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.4.2...2.4.3"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28568}
+\texorpdfstring{$>$}{>}2.\+4.\+3\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28569}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28569}
+
+\begin{DoxyItemize}
+\item Export Match\+Pth typing.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28570}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+4.\+1...\+2.\+4.\+2"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.4.1...2.4.2"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28570}
+\texorpdfstring{$>$}{>}2.\+4.\+2\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28571}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28571}
+
+\begin{DoxyItemize}
+\item Add missing types field in package.\+json.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28572}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+4.\+0...\+2.\+4.\+1"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.4.0...2.4.1"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28572}
+\texorpdfstring{$>$}{>}2.\+4.\+1\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28573}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28573}
+
+\begin{DoxyItemize}
+\item Include declaration files. Fixes \href{https://github.com/dividab/tsconfig-paths/issues/22}{\texttt{ \#22}}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28574}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+2.\+0...\+2.\+4.\+0"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.2.0...2.4.0"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28574}
+\texorpdfstring{$>$}{>}2.\+4.\+0\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28575}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28575}
+
+\begin{DoxyItemize}
+\item Removed dependency for package {\ttfamily tsconfig}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28576}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28576}
+
+\begin{DoxyItemize}
+\item Support for config inheritance with {\ttfamily extends}. Fixes \href{https://github.com/dividab/tsconfig-paths/issues/17}{\texttt{ \#17}}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28577}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+1.\+2...\+2.\+2.\+0"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.1.2...2.2.0"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28577}
+\texorpdfstring{$>$}{>}2.\+2.\+0\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28578}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28578}
+
+\begin{DoxyItemize}
+\item Fixed issue \href{https://github.com/dividab/tsconfig-paths/issues/7}{\texttt{ \#7}}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28579}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+1.\+1...\+2.\+1.\+2"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.1.1...2.1.2"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28579}
+\texorpdfstring{$>$}{>}2.\+1.\+2\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28580}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28580}
+
+\begin{DoxyItemize}
+\item Fixed issue \href{https://github.com/dividab/tsconfig-paths/issues/6}{\texttt{ \#6}}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28581}{}\doxysection{\texorpdfstring{$<$a href="{}https\+://github.\+com/dividab/tsconfig-\/paths/compare/2.\+1.\+0...\+2.\+1.\+1"{}}{<a href="https://github.com/dividab/tsconfig-paths/compare/2.1.0...2.1.1"}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28581}
+\texorpdfstring{$>$}{>}2.\+1.\+1\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28582}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28582}
+
+\begin{DoxyItemize}
+\item Fixed issue \href{https://github.com/dividab/tsconfig-paths/issues/4}{\texttt{ \#4}}
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28583}{}\doxysection{\texorpdfstring{\mbox{[}2.\+1.\+0\mbox{]}}{[2.1.0]}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28583}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28584}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28584}
+
+\begin{DoxyItemize}
+\item Fixed issue \href{https://github.com/dividab/tsconfig-paths/issues/3}{\texttt{ \#3}}
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28585}{}\doxysection{\texorpdfstring{\mbox{[}2.\+0.\+0\mbox{]}}{[2.0.0]}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28585}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28586}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28586}
+
+\begin{DoxyItemize}
+\item We now look at {\ttfamily process.\+env.\+TS\+\_\+\+NODE\+\_\+\+PROJECT}
+\item Functionality to bootstrap tsconfig-\/paths. Documentation in \href{https://github.com/dividab/tsconfig-paths/blob/master/README.md}{\texttt{ README}}
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28587}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28587}
+
+\begin{DoxyItemize}
+\item Changed signature for {\ttfamily create\+Match\+Path}. Now only takes absolute\+Url and paths.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28588}{}\doxysection{\texorpdfstring{\mbox{[}1.\+1.\+0\mbox{]}}{[1.1.0]}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28588}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28589}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28589}
+
+\begin{DoxyItemize}
+\item More explanation to readme.
+\item Match all extensions in require.\+extensions.
+\item Match longest pattern prefix first as typesript does.
+\item Match file in main field of package.\+json.
+\item Check for index files explicitly.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28590}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+0\mbox{]} -\/ 2016-\/12-\/30}{[1.0.0] - 2016-12-30}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28590}
+
+\begin{DoxyItemize}
+\item First stable release.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28591}{}\doxysection{\texorpdfstring{\mbox{[}0.\+4.\+0\mbox{]} -\/ 2016-\/12-\/30}{[0.4.0] - 2016-12-30}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28591}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28592}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28592}
+
+\begin{DoxyItemize}
+\item Renamed project to {\ttfamily tsocnfig-\/paths}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28593}{}\doxysection{\texorpdfstring{\mbox{[}0.\+3.\+0\mbox{]} -\/ 2016-\/12-\/30}{[0.3.0] - 2016-12-30}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28593}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28594}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28594}
+
+\begin{DoxyItemize}
+\item API documentation.
+\item {\ttfamily create\+Match\+Path} function.
+\item {\ttfamily match\+From\+Absolute\+Paths} function.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28595}{}\doxysubsection{\texorpdfstring{Removed}{Removed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28595}
+
+\begin{DoxyItemize}
+\item {\ttfamily find\+Path} function.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28596}{}\doxysection{\texorpdfstring{\mbox{[}0.\+2.\+1\mbox{]} -\/ 2016-\/12-\/29}{[0.2.1] - 2016-12-29}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28596}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28597}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28597}
+
+\begin{DoxyItemize}
+\item {\ttfamily tsconfig-\/paths/register} was not available.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28598}{}\doxysection{\texorpdfstring{\mbox{[}0.\+2.\+0\mbox{]} -\/ 2016-\/12-\/29}{[0.2.0] - 2016-12-29}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28598}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28599}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28599}
+
+\begin{DoxyItemize}
+\item Paths for files in sub-\/dirs.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28600}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28600}
+
+\begin{DoxyItemize}
+\item Programmatic use.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28601}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+2\mbox{]} -\/ 2016-\/12-\/28}{[0.1.2] - 2016-12-28}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28601}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28602}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28602}
+
+\begin{DoxyItemize}
+\item Fixed wrong name of the package in README.
+\item Add missing files on publish.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28603}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+1\mbox{]} -\/ 2016-\/12-\/28}{[0.1.1] - 2016-12-28}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28603}
+\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28604}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28604}
+
+\begin{DoxyItemize}
+\item Loading of tsconfig.
+\item Example.
+\item Publish scripts.
+\end{DoxyItemize}\hypertarget{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28605}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+0\mbox{]} -\/ 2016-\/12-\/28}{[0.1.0] - 2016-12-28}}\label{md_node__modules_2tsconfig-paths_2CHANGELOG_autotoc_md28605}
+
+\begin{DoxyItemize}
+\item Initial version. 
+\end{DoxyItemize}

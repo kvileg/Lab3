@@ -1,0 +1,45 @@
+\chapter{Prototypes}
+\hypertarget{md_node__modules_2_0dsinonjs_2commons_2lib_2prototypes_2README}{}\label{md_node__modules_2_0dsinonjs_2commons_2lib_2prototypes_2README}\index{Prototypes@{Prototypes}}
+\label{md_node__modules_2_0dsinonjs_2commons_2lib_2prototypes_2README_autotoc_md2439}%
+\Hypertarget{md_node__modules_2_0dsinonjs_2commons_2lib_2prototypes_2README_autotoc_md2439}%
+ The functions in this folder are to be use for keeping cached references to the built-\/in prototypes, so that people can\textquotesingle{}t inadvertently break the library by making mistakes in userland.
+
+See \href{https://github.com/sinonjs/sinon/pull/1523}{\texttt{ https\+://github.\+com/sinonjs/sinon/pull/1523}}\hypertarget{md_node__modules_2_0dsinonjs_2commons_2lib_2prototypes_2README_autotoc_md2440}{}\doxysection{\texorpdfstring{Without cached references}{Without cached references}}\label{md_node__modules_2_0dsinonjs_2commons_2lib_2prototypes_2README_autotoc_md2440}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ in\ userland,\ the\ library\ user\ needs\ to\ replace\ the\ filter\ method\ on}
+\DoxyCodeLine{//\ Array.prototype}
+\DoxyCodeLine{var\ array\ =\ [1,\ 2,\ 3];}
+\DoxyCodeLine{sinon.replace(array,\ "{}filter"{},\ sinon.fake.returns(2));}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ in\ a\ sinon\ module,\ the\ library\ author\ needs\ to\ use\ the\ filter\ method}
+\DoxyCodeLine{var\ someArray\ =\ ["{}a"{},\ "{}b"{},\ 42,\ "{}c"{}];}
+\DoxyCodeLine{var\ answer\ =\ filter(someArray,\ function\ (v)\ \{}
+\DoxyCodeLine{\ \ \ \ return\ v\ ===\ 42;}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(answer);}
+\DoxyCodeLine{//\ =>\ 2}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dsinonjs_2commons_2lib_2prototypes_2README_autotoc_md2441}{}\doxysection{\texorpdfstring{With cached references}{With cached references}}\label{md_node__modules_2_0dsinonjs_2commons_2lib_2prototypes_2README_autotoc_md2441}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ in\ userland,\ the\ library\ user\ needs\ to\ replace\ the\ filter\ method\ on}
+\DoxyCodeLine{//\ Array.prototype}
+\DoxyCodeLine{var\ array\ =\ [1,\ 2,\ 3];}
+\DoxyCodeLine{sinon.replace(array,\ "{}filter"{},\ sinon.fake.returns(2));}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ in\ a\ sinon\ module,\ the\ library\ author\ needs\ to\ use\ the\ filter\ method}
+\DoxyCodeLine{//\ get\ a\ reference\ to\ the\ original\ Array.prototype.filter}
+\DoxyCodeLine{var\ filter\ =\ require("{}@sinonjs/commons"{}).prototypes.array.filter;}
+\DoxyCodeLine{var\ someArray\ =\ ["{}a"{},\ "{}b"{},\ 42,\ "{}c"{}];}
+\DoxyCodeLine{var\ answer\ =\ filter(someArray,\ function\ (v)\ \{}
+\DoxyCodeLine{\ \ \ \ return\ v\ ===\ 42;}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(answer);}
+\DoxyCodeLine{//\ =>\ 42}
+
+\end{DoxyCode}
+ 

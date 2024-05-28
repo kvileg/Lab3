@@ -1,0 +1,185 @@
+\chapter{Installing Post\+CSS HWB Function}
+\hypertarget{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL}{}\label{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL}\index{Installing PostCSS HWB Function@{Installing PostCSS HWB Function}}
+\label{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md653}%
+\Hypertarget{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md653}%
+ \href{https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-hwb-function}{\texttt{ Post\+CSS HWB Function}} runs in all Node environments, with special instructions for\+:
+
+\texorpdfstring{$\vert$}{|} Node \texorpdfstring{$\vert$}{|} Post\+CSS CLI \texorpdfstring{$\vert$}{|} Webpack \texorpdfstring{$\vert$}{|} Create React App \texorpdfstring{$\vert$}{|} Gulp \texorpdfstring{$\vert$}{|} Grunt \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} --- \texorpdfstring{$\vert$}{|} --- \texorpdfstring{$\vert$}{|} --- \texorpdfstring{$\vert$}{|} --- \texorpdfstring{$\vert$}{|} --- \texorpdfstring{$\vert$}{|} --- \texorpdfstring{$\vert$}{|}\hypertarget{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md654}{}\doxysection{\texorpdfstring{Node}{Node}}\label{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md654}
+Add \href{https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-hwb-function}{\texttt{ Post\+CSS HWB Function}} to your project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ postcss\ @csstools/postcss-\/hwb-\/function\ -\/-\/save-\/dev}
+
+\end{DoxyCode}
+
+
+Use it as a \href{https://github.com/postcss/postcss}{\texttt{ Post\+CSS}} plugin\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ postcss\ =\ require('postcss');}
+\DoxyCodeLine{const\ postcssHWBFunction\ =\ require('@csstools/postcss-\/hwb-\/function');}
+\DoxyCodeLine{}
+\DoxyCodeLine{postcss([}
+\DoxyCodeLine{\ \ \ \ postcssHWBFunction(/*\ pluginOptions\ */)}
+\DoxyCodeLine{]).process(YOUR\_CSS\ /*,\ processOptions\ */);}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md655}{}\doxysection{\texorpdfstring{Post\+CSS CLI}{PostCSS CLI}}\label{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md655}
+Add \href{https://github.com/postcss/postcss-cli}{\texttt{ Post\+CSS CLI}} to your project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ postcss-\/cli\ @csstools/postcss-\/hwb-\/function\ -\/-\/save-\/dev}
+
+\end{DoxyCode}
+
+
+Use \href{https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-hwb-function}{\texttt{ Post\+CSS HWB Function}} in your {\ttfamily postcss.\+config.\+js} configuration file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ postcssHWBFunction\ =\ require('@csstools/postcss-\/hwb-\/function');}
+\DoxyCodeLine{}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ \ \ plugins:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ postcssHWBFunction(/*\ pluginOptions\ */)}
+\DoxyCodeLine{\ \ \ \ ]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md656}{}\doxysection{\texorpdfstring{Webpack}{Webpack}}\label{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md656}
+{\itshape Webpack version 5}
+
+Add \href{https://github.com/postcss/postcss-loader}{\texttt{ Post\+CSS Loader}} to your project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ postcss-\/loader\ @csstools/postcss-\/hwb-\/function\ -\/-\/save-\/dev}
+
+\end{DoxyCode}
+
+
+Use \href{https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-hwb-function}{\texttt{ Post\+CSS HWB Function}} in your Webpack configuration\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{module.exports\ =\ \{}
+\DoxyCodeLine{\ \ \ \ module:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ rules:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ test:\ /\(\backslash\).css\$/i,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ use:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}style-\/loader"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loader:\ "{}css-\/loader"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ options:\ \{\ importLoaders:\ 1\ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ loader:\ "{}postcss-\/loader"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ postcssOptions:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ plugins:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}@csstools/postcss-\/hwb-\/function"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Options}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md657}{}\doxysection{\texorpdfstring{Create React App}{Create React App}}\label{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md657}
+Add \href{https://github.com/timarney/react-app-rewired}{\texttt{ React App Rewired}} and \href{https://github.com/csstools/react-app-rewire-postcss}{\texttt{ React App Rewire Post\+CSS}} to your project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ react-\/app-\/rewired\ react-\/app-\/rewire-\/postcss\ @csstools/postcss-\/hwb-\/function\ -\/-\/save-\/dev}
+
+\end{DoxyCode}
+
+
+Use \href{https://github.com/csstools/react-app-rewire-postcss}{\texttt{ React App Rewire Post\+CSS}} and \href{https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-hwb-function}{\texttt{ Post\+CSS HWB Function}} in your {\ttfamily config-\/overrides.\+js} file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ reactAppRewirePostcss\ =\ require('react-\/app-\/rewire-\/postcss');}
+\DoxyCodeLine{const\ postcssHWBFunction\ =\ require('@csstools/postcss-\/hwb-\/function');}
+\DoxyCodeLine{}
+\DoxyCodeLine{module.exports\ =\ config\ =>\ reactAppRewirePostcss(config,\ \{}
+\DoxyCodeLine{\ \ \ \ plugins:\ ()\ =>\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ postcssHWBFunction(/*\ pluginOptions\ */)}
+\DoxyCodeLine{\ \ \ \ ]}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md658}{}\doxysection{\texorpdfstring{Gulp}{Gulp}}\label{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md658}
+Add \href{https://github.com/postcss/gulp-postcss}{\texttt{ Gulp Post\+CSS}} to your project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ gulp-\/postcss\ @csstools/postcss-\/hwb-\/function\ -\/-\/save-\/dev}
+
+\end{DoxyCode}
+
+
+Use \href{https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-hwb-function}{\texttt{ Post\+CSS HWB Function}} in your Gulpfile\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ postcss\ =\ require('gulp-\/postcss');}
+\DoxyCodeLine{const\ postcssHWBFunction\ =\ require('@csstools/postcss-\/hwb-\/function');}
+\DoxyCodeLine{}
+\DoxyCodeLine{gulp.task('css',\ function\ ()\ \{}
+\DoxyCodeLine{\ \ \ \ var\ plugins\ =\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ postcssHWBFunction(/*\ pluginOptions\ */)}
+\DoxyCodeLine{\ \ \ \ ];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ return\ gulp.src('./src/*.css')}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .pipe(postcss(plugins))}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .pipe(gulp.dest('.'));}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md659}{}\doxysection{\texorpdfstring{Grunt}{Grunt}}\label{md_node__modules_2_0dcsstools_2postcss-hwb-function_2INSTALL_autotoc_md659}
+Add \href{https://github.com/nDmitry/grunt-postcss}{\texttt{ Grunt Post\+CSS}} to your project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ grunt-\/postcss\ @csstools/postcss-\/hwb-\/function\ -\/-\/save-\/dev}
+
+\end{DoxyCode}
+
+
+Use \href{https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-hwb-function}{\texttt{ Post\+CSS HWB Function}} in your Gruntfile\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ postcssHWBFunction\ =\ require('@csstools/postcss-\/hwb-\/function');}
+\DoxyCodeLine{}
+\DoxyCodeLine{grunt.loadNpmTasks('grunt-\/postcss');}
+\DoxyCodeLine{}
+\DoxyCodeLine{grunt.initConfig(\{}
+\DoxyCodeLine{\ \ \ \ postcss:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ options:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ processors:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ postcssHWBFunction(/*\ pluginOptions\ */)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ dist:\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ src:\ '*.css'}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+ 

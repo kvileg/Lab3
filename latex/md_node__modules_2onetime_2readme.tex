@@ -1,0 +1,79 @@
+\chapter{onetime \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+com/github/sindresorhus/onetime"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+com/sindresorhus/onetime.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2onetime_2readme}{}\label{md_node__modules_2onetime_2readme}\index{onetime $<$a href="{}https://travis-\/ci.com/github/sindresorhus/onetime"{} $>$$<$img src="{}https://travis-\/ci.com/sindresorhus/onetime.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{onetime $<$a href=""https://travis-\/ci.com/github/sindresorhus/onetime"" $>$$<$img src=""https://travis-\/ci.com/sindresorhus/onetime.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2onetime_2readme_autotoc_md20147}%
+\Hypertarget{md_node__modules_2onetime_2readme_autotoc_md20147}%
+ \begin{quote}
+Ensure a function is only called once \end{quote}
+When called multiple times it will return the return value from the first call.
+
+{\itshape Unlike the module \href{https://github.com/isaacs/once}{\texttt{ once}}, this one isn\textquotesingle{}t naughty and extending {\ttfamily Function.\+prototype}.}\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20148}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2onetime_2readme_autotoc_md20148}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ onetime}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20149}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2onetime_2readme_autotoc_md20149}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ onetime\ =\ require('onetime');}
+\DoxyCodeLine{}
+\DoxyCodeLine{let\ i\ =\ 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ foo\ =\ onetime(()\ =>\ ++i);}
+\DoxyCodeLine{}
+\DoxyCodeLine{foo();\ //=>\ 1}
+\DoxyCodeLine{foo();\ //=>\ 1}
+\DoxyCodeLine{foo();\ //=>\ 1}
+\DoxyCodeLine{}
+\DoxyCodeLine{onetime.callCount(foo);\ //=>\ 3}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ onetime\ =\ require('onetime');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ foo\ =\ onetime(()\ =>\ \{\},\ \{throw:\ true\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{foo();}
+\DoxyCodeLine{}
+\DoxyCodeLine{foo();}
+\DoxyCodeLine{//=>\ Error:\ Function\ \`{}foo`\ can\ only\ be\ called\ once}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20150}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2onetime_2readme_autotoc_md20150}
+\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20151}{}\doxysubsection{\texorpdfstring{onetime(fn, options?)}{onetime(fn, options?)}}\label{md_node__modules_2onetime_2readme_autotoc_md20151}
+Returns a function that only calls {\ttfamily fn} once.\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20152}{}\doxysubsubsection{\texorpdfstring{fn}{fn}}\label{md_node__modules_2onetime_2readme_autotoc_md20152}
+Type\+: {\ttfamily Function}
+
+Function that should only be called once.\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20153}{}\doxysubsubsection{\texorpdfstring{options}{options}}\label{md_node__modules_2onetime_2readme_autotoc_md20153}
+Type\+: {\ttfamily object}\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20154}{}\doxyparagraph{\texorpdfstring{throw}{throw}}\label{md_node__modules_2onetime_2readme_autotoc_md20154}
+Type\+: {\ttfamily boolean}\textbackslash{} Default\+: {\ttfamily false}
+
+Throw an error when called more than once.\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20155}{}\doxysubsection{\texorpdfstring{onetime.\+call\+Count(fn)}{onetime.callCount(fn)}}\label{md_node__modules_2onetime_2readme_autotoc_md20155}
+Returns a number representing how many times {\ttfamily fn} has been called.
+
+Note\+: It throws an error if you pass in a function that is not wrapped by {\ttfamily onetime}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ onetime\ =\ require('onetime');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ foo\ =\ onetime(()\ =>\ \{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{foo();}
+\DoxyCodeLine{foo();}
+\DoxyCodeLine{foo();}
+\DoxyCodeLine{}
+\DoxyCodeLine{console.log(onetime.callCount(foo));}
+\DoxyCodeLine{//=>\ 3}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20156}{}\doxysubsubsection{\texorpdfstring{fn}{fn}}\label{md_node__modules_2onetime_2readme_autotoc_md20156}
+Type\+: {\ttfamily Function}
+
+Function to get call count from.\hypertarget{md_node__modules_2onetime_2readme_autotoc_md20157}{}\doxysection{\texorpdfstring{onetime for enterprise}{onetime for enterprise}}\label{md_node__modules_2onetime_2readme_autotoc_md20157}
+Available as part of the Tidelift Subscription.
+
+The maintainers of onetime and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. \href{https://tidelift.com/subscription/pkg/npm-onetime?utm_source=npm-onetime&utm_medium=referral&utm_campaign=enterprise&utm_term=repo}{\texttt{ Learn more.}} 

@@ -1,0 +1,205 @@
+\chapter{cssnano-\/preset-\/default}
+\hypertarget{md_node__modules_2cssnano-preset-default_2README}{}\label{md_node__modules_2cssnano-preset-default_2README}\index{cssnano-\/preset-\/default@{cssnano-\/preset-\/default}}
+\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8853}%
+\Hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8853}%
+ \begin{quote}
+Safe defaults for cssnano which require minimal configuration. \end{quote}
+\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8854}{}\doxysection{\texorpdfstring{Table of Contents}{Table of Contents}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8854}
+
+\begin{DoxyItemize}
+\item \doxylink{md_node__modules_2safer-buffer_2Porting-Buffer_overview}{Overview}
+\item \doxylink{md_node__modules_2_0dtypes_2jest_2node__modules_2_0dsinclair_2typebox_2readme_usage}{Usage}
+\begin{DoxyItemize}
+\item Install
+\item \doxylink{md_node__modules_2yargs-parser_2README_configuration}{Configuration}
+\end{DoxyItemize}
+\item Plugins
+\begin{DoxyItemize}
+\item css-\/declaration-\/sorter (external)
+\item cssnano-\/utils
+\item postcss-\/calc (external)
+\item postcss-\/colormin
+\item postcss-\/convert-\/values
+\item postcss-\/discard-\/comments
+\item postcss-\/discard-\/duplicates
+\item postcss-\/discard-\/empty
+\item postcss-\/discard-\/overridden
+\item postcss-\/merge-\/longhand
+\item postcss-\/merge-\/rules
+\item postcss-\/minify-\/font-\/values
+\item postcss-\/minify-\/gradients
+\item postcss-\/minify-\/params
+\item postcss-\/minify-\/selectors
+\item postcss-\/normalize-\/charset
+\item postcss-\/normalize-\/display-\/values
+\item postcss-\/normalize-\/positions
+\item postcss-\/normalize-\/repeat-\/style
+\item postcss-\/normalize-\/string
+\item postcss-\/normalize-\/timing-\/functions
+\item postcss-\/normalize-\/unicode
+\item postcss-\/normalize-\/url
+\item postcss-\/normalize-\/whitespace
+\item postcss-\/ordered-\/values
+\item postcss-\/reduce-\/initial
+\item postcss-\/reduce-\/transforms
+\item postcss-\/svgo
+\item postcss-\/unique-\/selectors
+\end{DoxyItemize}
+\item Contributors
+\item License
+\end{DoxyItemize}\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8855}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8855}
+This default preset for cssnano only includes transforms that make no assumptions about your CSS other than what is passed in. In previous iterations of cssnano, assumptions were made about your CSS which caused output to look different in certain use cases, but not others. These transforms have been moved from the defaults to other presets, to make this preset require only minimal configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8856}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8856}
+\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8857}{}\doxysubsection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8857}
+Note that this preset comes bundled with cssnano {\itshape by default}, so you don\textquotesingle{}t need to install it separately.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8858}{}\doxysubsection{\texorpdfstring{Configuration}{Configuration}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8858}
+If you would like to use the default configuration, then you don\textquotesingle{}t need to add anything to your {\ttfamily package.\+json}.
+
+But should you wish to customise this, you can pass an array with the second parameter as the options object to use. For example, to remove all comments\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \{}
+\DoxyCodeLine{\ \ \ "{}name"{}:\ "{}awesome-\/application"{},}
+\DoxyCodeLine{+\ \ "{}cssnano"{}:\ \{}
+\DoxyCodeLine{+\ \ \ \ "{}preset"{}:\ [}
+\DoxyCodeLine{+\ \ \ \ \ \ "{}default"{},}
+\DoxyCodeLine{+\ \ \ \ \ \ \{"{}discardComments"{}:\ \{"{}removeAll"{}:\ true\}\}}
+\DoxyCodeLine{+\ \ \ \ ]}
+\DoxyCodeLine{+\ \ \}}
+\DoxyCodeLine{\ \}}
+
+\end{DoxyCode}
+
+
+Depending on your usage, the JSON configuration might not work for you, such as in cases where you would like to use options with customisable function parameters. For this use case, we recommend a {\ttfamily cssnano.\+config.\+js} at the same location as your {\ttfamily package.\+json}. You can then load a preset and export it with your custom parameters\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ defaultPreset\ =\ require('cssnano-\/preset-\/default');}
+\DoxyCodeLine{}
+\DoxyCodeLine{module.exports\ =\ defaultPreset(\{}
+\DoxyCodeLine{\ \ discardComments:\ \{}
+\DoxyCodeLine{\ \ \ \ remove:\ (comment)\ =>\ comment[0]\ ===\ '@',}
+\DoxyCodeLine{\ \ \},}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+
+
+Note that you may wish to publish your own preset to npm for reusability, should it differ a lot from this one. This is highly encouraged!\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8859}{}\doxysection{\texorpdfstring{Plugins}{Plugins}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8859}
+\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8860}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/\+Siilwyn/css-\/declaration-\/sorter"{} $>$$<$tt$>$css-\/declaration-\/sorter$<$/tt$>$$<$/a$>$ (external)}{<a href="https://github.com/Siilwyn/css-declaration-sorter" ><tt>css-declaration-sorter</tt></a> (external)}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8860}
+\begin{quote}
+Sorts CSS declarations fast and automatically in a certain order. \end{quote}
+This plugin is loaded with the following configuration\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ keepOverrides:\ true}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8861}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/cssnano-\/utils"{} $>$$<$tt$>$cssnano-\/utils$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/cssnano-utils" ><tt>cssnano-utils</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8861}
+\begin{quote}
+Utility methods used by cssnano \end{quote}
+\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8862}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/postcss/postcss-\/calc"{} $>$$<$tt$>$postcss-\/calc$<$/tt$>$$<$/a$>$ (external)}{<a href="https://github.com/postcss/postcss-calc" ><tt>postcss-calc</tt></a> (external)}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8862}
+\begin{quote}
+Post\+CSS plugin to reduce calc() \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8863}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/colormin"{} $>$$<$tt$>$postcss-\/colormin$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-colormin" ><tt>postcss-colormin</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8863}
+\begin{quote}
+Minify colors in your CSS files with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8864}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/convert-\/values"{} $>$$<$tt$>$postcss-\/convert-\/values$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-convert-values" ><tt>postcss-convert-values</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8864}
+\begin{quote}
+Convert values with Post\+CSS (e.\+g. ms -\/\texorpdfstring{$>$}{>} s) \end{quote}
+This plugin is loaded with the following configuration\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ length:\ false;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8865}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/discard-\/comments"{} $>$$<$tt$>$postcss-\/discard-\/comments$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-discard-comments" ><tt>postcss-discard-comments</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8865}
+\begin{quote}
+Discard comments in your CSS files with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8866}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/discard-\/duplicates"{} $>$$<$tt$>$postcss-\/discard-\/duplicates$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-discard-duplicates" ><tt>postcss-discard-duplicates</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8866}
+\begin{quote}
+Discard duplicate rules in your CSS files with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8867}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/discard-\/empty"{} $>$$<$tt$>$postcss-\/discard-\/empty$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-discard-empty" ><tt>postcss-discard-empty</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8867}
+\begin{quote}
+Discard empty rules and values with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8868}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/discard-\/overridden"{} $>$$<$tt$>$postcss-\/discard-\/overridden$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-discard-overridden" ><tt>postcss-discard-overridden</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8868}
+\begin{quote}
+Post\+CSS plugin to discard overridden @keyframes or @counter-\/style. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8869}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/merge-\/longhand"{} $>$$<$tt$>$postcss-\/merge-\/longhand$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-merge-longhand" ><tt>postcss-merge-longhand</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8869}
+\begin{quote}
+Merge longhand properties into shorthand with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8870}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/merge-\/rules"{} $>$$<$tt$>$postcss-\/merge-\/rules$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-merge-rules" ><tt>postcss-merge-rules</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8870}
+\begin{quote}
+Merge CSS rules with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8871}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/minify-\/font-\/values"{} $>$$<$tt$>$postcss-\/minify-\/font-\/values$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-minify-font-values" ><tt>postcss-minify-font-values</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8871}
+\begin{quote}
+Minify font declarations with Post\+CSS \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8872}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/minify-\/gradients"{} $>$$<$tt$>$postcss-\/minify-\/gradients$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-minify-gradients" ><tt>postcss-minify-gradients</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8872}
+\begin{quote}
+Minify gradient parameters with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8873}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/minify-\/params"{} $>$$<$tt$>$postcss-\/minify-\/params$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-minify-params" ><tt>postcss-minify-params</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8873}
+\begin{quote}
+Minify at-\/rule params with Post\+CSS \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8874}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/minify-\/selectors"{} $>$$<$tt$>$postcss-\/minify-\/selectors$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-minify-selectors" ><tt>postcss-minify-selectors</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8874}
+\begin{quote}
+Minify selectors with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8875}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/charset"{} $>$$<$tt$>$postcss-\/normalize-\/charset$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-charset" ><tt>postcss-normalize-charset</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8875}
+\begin{quote}
+Add necessary or remove extra charset with Post\+CSS \end{quote}
+This plugin is loaded with the following configuration\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ add:\ false;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8876}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/display-\/values"{} $>$$<$tt$>$postcss-\/normalize-\/display-\/values$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-display-values" ><tt>postcss-normalize-display-values</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8876}
+\begin{quote}
+Normalize multiple value display syntaxes into single values. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8877}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/positions"{} $>$$<$tt$>$postcss-\/normalize-\/positions$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-positions" ><tt>postcss-normalize-positions</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8877}
+\begin{quote}
+Normalize keyword values for position into length values. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8878}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/repeat-\/style"{} $>$$<$tt$>$postcss-\/normalize-\/repeat-\/style$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-repeat-style" ><tt>postcss-normalize-repeat-style</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8878}
+\begin{quote}
+Convert two value syntax for repeat-\/style into one value. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8879}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/string"{} $>$$<$tt$>$postcss-\/normalize-\/string$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-string" ><tt>postcss-normalize-string</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8879}
+\begin{quote}
+Normalize wrapping quotes for CSS string literals. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8880}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/timing-\/functions"{} $>$$<$tt$>$postcss-\/normalize-\/timing-\/functions$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-timing-functions" ><tt>postcss-normalize-timing-functions</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8880}
+\begin{quote}
+Normalize CSS animation/transition timing functions. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8881}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/unicode"{} $>$$<$tt$>$postcss-\/normalize-\/unicode$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-unicode" ><tt>postcss-normalize-unicode</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8881}
+\begin{quote}
+Normalize unicode-\/range descriptors, and can convert to wildcard ranges. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8882}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/url"{} $>$$<$tt$>$postcss-\/normalize-\/url$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-url" ><tt>postcss-normalize-url</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8882}
+\begin{quote}
+Normalize URLs with Post\+CSS \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8883}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/normalize-\/whitespace"{} $>$$<$tt$>$postcss-\/normalize-\/whitespace$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-normalize-whitespace" ><tt>postcss-normalize-whitespace</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8883}
+\begin{quote}
+Trim whitespace inside and around CSS rules \& declarations. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8884}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/ordered-\/values"{} $>$$<$tt$>$postcss-\/ordered-\/values$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-ordered-values" ><tt>postcss-ordered-values</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8884}
+\begin{quote}
+Ensure values are ordered consistently in your CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8885}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/reduce-\/initial"{} $>$$<$tt$>$postcss-\/reduce-\/initial$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-reduce-initial" ><tt>postcss-reduce-initial</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8885}
+\begin{quote}
+Reduce initial definitions to the actual initial value, where possible. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8886}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/reduce-\/transforms"{} $>$$<$tt$>$postcss-\/reduce-\/transforms$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-reduce-transforms" ><tt>postcss-reduce-transforms</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8886}
+\begin{quote}
+Reduce transform functions with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8887}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/svgo"{} $>$$<$tt$>$postcss-\/svgo$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-svgo" ><tt>postcss-svgo</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8887}
+\begin{quote}
+Optimise inline SVG with Post\+CSS. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8888}{}\doxysubsection{\texorpdfstring{$<$a href="{}https\+://github.\+com/cssnano/cssnano/tree/master/packages/postcss-\/unique-\/selectors"{} $>$$<$tt$>$postcss-\/unique-\/selectors$<$/tt$>$$<$/a$>$}{<a href="https://github.com/cssnano/cssnano/tree/master/packages/postcss-unique-selectors" ><tt>postcss-unique-selectors</tt></a>}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8888}
+\begin{quote}
+Ensure CSS selectors are unique. \end{quote}
+This plugin is loaded with its default configuration.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8889}{}\doxysection{\texorpdfstring{Contributors}{Contributors}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8889}
+See \href{https://github.com/cssnano/cssnano/blob/master/CONTRIBUTORS.md}{\texttt{ CONTRIBUTORS.\+md}}.\hypertarget{md_node__modules_2cssnano-preset-default_2README_autotoc_md8890}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2cssnano-preset-default_2README_autotoc_md8890}
+MIT © \href{http://beneb.info}{\texttt{ Ben Briggs}} 

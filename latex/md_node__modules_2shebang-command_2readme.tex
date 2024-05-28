@@ -1,0 +1,30 @@
+\chapter{shebang-\/command \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/kevva/shebang-\/command"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/kevva/shebang-\/command.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2shebang-command_2readme}{}\label{md_node__modules_2shebang-command_2readme}\index{shebang-\/command $<$a href="{}https://travis-\/ci.org/kevva/shebang-\/command"{} $>$$<$img src="{}https://travis-\/ci.org/kevva/shebang-\/command.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{shebang-\/command $<$a href=""https://travis-\/ci.org/kevva/shebang-\/command"" $>$$<$img src=""https://travis-\/ci.org/kevva/shebang-\/command.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2shebang-command_2readme_autotoc_md25937}%
+\Hypertarget{md_node__modules_2shebang-command_2readme_autotoc_md25937}%
+ \begin{quote}
+Get the command from a shebang \end{quote}
+\hypertarget{md_node__modules_2shebang-command_2readme_autotoc_md25938}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2shebang-command_2readme_autotoc_md25938}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ shebang-\/command}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2shebang-command_2readme_autotoc_md25939}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2shebang-command_2readme_autotoc_md25939}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{const\ shebangCommand\ =\ require('shebang-\/command');}
+\DoxyCodeLine{}
+\DoxyCodeLine{shebangCommand('\#!/usr/bin/env\ node');}
+\DoxyCodeLine{//=>\ 'node'}
+\DoxyCodeLine{}
+\DoxyCodeLine{shebangCommand('\#!/bin/bash');}
+\DoxyCodeLine{//=>\ 'bash'}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2shebang-command_2readme_autotoc_md25940}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2shebang-command_2readme_autotoc_md25940}
+\hypertarget{md_node__modules_2shebang-command_2readme_autotoc_md25941}{}\doxysubsection{\texorpdfstring{shebang\+Command(string)}{shebangCommand(string)}}\label{md_node__modules_2shebang-command_2readme_autotoc_md25941}
+\hypertarget{md_node__modules_2shebang-command_2readme_autotoc_md25942}{}\doxysubsubsection{\texorpdfstring{string}{string}}\label{md_node__modules_2shebang-command_2readme_autotoc_md25942}
+Type\+: {\ttfamily string}
+
+String containing a shebang. 

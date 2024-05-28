@@ -1,0 +1,125 @@
+\chapter{Changes to Post\+CSS Pseudo Class Any Link}
+\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG}{}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG}\index{Changes to PostCSS Pseudo Class Any Link@{Changes to PostCSS Pseudo Class Any Link}}
+\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21712}%
+\Hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21712}%
+ \hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21713}{}\doxysubsection{\texorpdfstring{7.\+1.\+6 (\+July 8, 2022)}{7.1.6 (July 8, 2022)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21713}
+
+\begin{DoxyItemize}
+\item Fix case insensitive {\ttfamily \+:any-\/link} matching.
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21714}{}\doxysubsection{\texorpdfstring{7.\+1.\+5 (\+June 23, 2022)}{7.1.5 (June 23, 2022)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21714}
+
+\begin{DoxyItemize}
+\item Fix selector order with any pseudo element. This plugin will no longer re-\/order selectors.
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21715}{}\doxysubsection{\texorpdfstring{7.\+1.\+4 (\+May 17, 2022)}{7.1.4 (May 17, 2022)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21715}
+
+\begin{DoxyItemize}
+\item Fix selector order with {\ttfamily \+:before} and other pseudo elements.
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21716}{}\doxysubsection{\texorpdfstring{7.\+1.\+3 (\+May 6, 2022)}{7.1.3 (May 6, 2022)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21716}
+
+\begin{DoxyItemize}
+\item Improve handling of {\ttfamily \texorpdfstring{$<$}{<}area\texorpdfstring{$>$}{>}} fallbacks for IE and Edge.
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{a:any-\/link\ \{}
+\DoxyCodeLine{\ \ \ \ text-\/decoration:\ none;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{/*\ becomes\ */}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/\ a:link,\ a:visited,\ aarea[href]\ \{}
+\DoxyCodeLine{+\ a:link,\ a:visited\ \{}
+\DoxyCodeLine{\ \ \ \ text-\/decoration:\ none;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21717}{}\doxysubsection{\texorpdfstring{7.\+1.\+2 (\+April 4, 2022)}{7.1.2 (April 4, 2022)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21717}
+
+\begin{DoxyItemize}
+\item Improved \+: compound selector order with pseudo elements
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21718}{}\doxysubsection{\texorpdfstring{7.\+1.\+1 (\+February 5, 2022)}{7.1.1 (February 5, 2022)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21718}
+
+\begin{DoxyItemize}
+\item Improved {\ttfamily es module} and {\ttfamily commonjs} compatibility
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21719}{}\doxysubsection{\texorpdfstring{7.\+1.\+0 (\+January 31, 2022)}{7.1.0 (January 31, 2022)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21719}
+
+\begin{DoxyItemize}
+\item Add support in IE and Edge for the {\ttfamily \texorpdfstring{$<$}{<}area\texorpdfstring{$>$}{>}} element
+\item Add support for {\ttfamily \+:any-\/link} in pseudo class functions ({\ttfamily \+:not(\+:any-\/link)})
+\end{DoxyItemize}
+
+To support matching {\ttfamily \+:any-\/link} in IE and Edge on {\ttfamily \texorpdfstring{$<$}{<}area href\texorpdfstring{$>$}{>}} you need to set the {\ttfamily sub\+Features.\+area\+Href\+Needs\+Fixing} option to {\ttfamily true}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{postcssPseudoClassAnyLink(\{}
+\DoxyCodeLine{\ \ subFeatures:\ \{}
+\DoxyCodeLine{\ \ \ \ areaHrefNeedsFixing:\ true}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21720}{}\doxysubsection{\texorpdfstring{7.\+0.\+2 (\+January 2, 2022)}{7.0.2 (January 2, 2022)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21720}
+
+\begin{DoxyItemize}
+\item Removed Sourcemaps from package tarball.
+\item Moved CLI to CLI Package. See \href{https://github.com/csstools/postcss-plugins/discussions/121}{\texttt{ announcement}}.
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21721}{}\doxysubsection{\texorpdfstring{7.\+0.\+1 (\+December 13, 2021)}{7.0.1 (December 13, 2021)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21721}
+
+\begin{DoxyItemize}
+\item Updated\+: documentation
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21722}{}\doxysubsection{\texorpdfstring{7.\+0.\+0 (\+September 17, 2021)}{7.0.0 (September 17, 2021)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21722}
+
+\begin{DoxyItemize}
+\item Updated\+: Support for Post\+CSS 8+ (major).
+\item Updated\+: Support for Node v12+ (major).
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21723}{}\doxysubsection{\texorpdfstring{6.\+0.\+0 (\+September 17, 2018)}{6.0.0 (September 17, 2018)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21723}
+
+\begin{DoxyItemize}
+\item Updated\+: Support for Post\+CSS v7+
+\item Updated\+: Support for Node v6+
+\item Updated\+: Post\+CSS Selector Parser 5.\+0.\+0-\/rc.\+3 (major)
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21724}{}\doxysubsection{\texorpdfstring{5.\+0.\+0 (\+May 7, 2018)}{5.0.0 (May 7, 2018)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21724}
+
+\begin{DoxyItemize}
+\item Updated\+: {\ttfamily postcss-\/selector-\/parser} to v4.\+0.\+0 (major)
+\item Updated\+: {\ttfamily postcss} to v6.\+0.\+22 (patch)
+\item Changed\+: Preserves {\ttfamily \+:any-\/link} by default
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21725}{}\doxysubsection{\texorpdfstring{4.\+0.\+0 (\+May 10, 2017)}{4.0.0 (May 10, 2017)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21725}
+
+\begin{DoxyItemize}
+\item Added\+: Support for Post\+CSS v6
+\item Added\+: Support for Node v4
+\item Removed\+: {\ttfamily prefix} option, as that would be non-\/spec
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21726}{}\doxysubsection{\texorpdfstring{3.\+0.\+1 (\+December 8, 2016)}{3.0.1 (December 8, 2016)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21726}
+
+\begin{DoxyItemize}
+\item Updated\+: Use destructing assignment on plugin options
+\item Updated\+: Use template literals
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21727}{}\doxysubsection{\texorpdfstring{3.\+0.\+0 (\+December 5, 2016)}{3.0.0 (December 5, 2016)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21727}
+
+\begin{DoxyItemize}
+\item Updated\+: boilerplate conventions (Node v6.\+9.\+1 LTS)
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21728}{}\doxysubsection{\texorpdfstring{1.\+0.\+0 (\+September 1, 2015)}{1.0.0 (September 1, 2015)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21728}
+
+\begin{DoxyItemize}
+\item Updated\+: Post\+CSS 5
+\item Updated\+: Develop dependencies
+\item Updated\+: ESLint configuration
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21729}{}\doxysubsection{\texorpdfstring{0.\+3.\+0 (\+June 16, 2015)}{0.3.0 (June 16, 2015)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21729}
+
+\begin{DoxyItemize}
+\item Added\+: Support for complex uses
+\item Added\+: Code documentation
+\item Changed\+: Coding conventions
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21730}{}\doxysubsection{\texorpdfstring{0.\+2.\+1 (\+June 16, 2015)}{0.2.1 (June 16, 2015)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21730}
+
+\begin{DoxyItemize}
+\item Fixed\+: postcss-\/selector-\/parser is included as a dependency
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21731}{}\doxysubsection{\texorpdfstring{0.\+2.\+0 (\+June 15, 2015)}{0.2.0 (June 15, 2015)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21731}
+
+\begin{DoxyItemize}
+\item Changed\+: use postcss-\/selector-\/parser
+\end{DoxyItemize}\hypertarget{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21732}{}\doxysubsection{\texorpdfstring{0.\+1.\+1 (\+June 14, 2015)}{0.1.1 (June 14, 2015)}}\label{md_node__modules_2postcss-pseudo-class-any-link_2CHANGELOG_autotoc_md21732}
+Initial release 

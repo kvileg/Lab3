@@ -1,0 +1,27 @@
+\chapter{String.\+prototype.\+trim\+End \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+com/package/string.\+prototype.\+trimend"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://vb.\+teelaun.\+ch/es-\/shims/\+String.\+prototype.\+trim\+End.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2string_8prototype_8trimend_2README}{}\label{md_node__modules_2string_8prototype_8trimend_2README}\index{String.prototype.trimEnd $<$sup$>$$<$a href="{}https://npmjs.com/package/string.prototype.trimend"{} $>$$<$img src="{}https://vb.teelaun.ch/es-\/shims/String.prototype.trimEnd.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{String.prototype.trimEnd $<$sup$>$$<$a href=""https://npmjs.com/package/string.prototype.trimend"" $>$$<$img src=""https://vb.teelaun.ch/es-\/shims/String.prototype.trimEnd.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2string_8prototype_8trimend_2README_autotoc_md26705}%
+\Hypertarget{md_node__modules_2string_8prototype_8trimend_2README_autotoc_md26705}%
+ \href{https://github.com/es-shims/String.prototype.trimEnd/actions}{\texttt{ }} \href{https://app.codecov.io/gh/es-shims/String.prototype.trimEnd/}{\texttt{ }} \href{https://david-dm.org/es-shims/String.prototype.trimEnd}{\texttt{ }} \href{https://david-dm.org/es-shims/String.prototype.trimEnd\#info=devDependencies}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=string.prototype.trimend}{\texttt{ }}
+
+\href{https://npmjs.com/package/string.prototype.trimend}{\texttt{ }}
+
+An ES2019-\/spec-\/compliant {\ttfamily String.\+prototype.\+trim\+End} shim. Invoke its "{}shim"{} method to shim {\ttfamily String.\+prototype.\+trim\+End} if it is unavailable.
+
+This package implements the \href{https://github.com/es-shims/api}{\texttt{ es-\/shim API}} interface. It works in an ES3-\/supported environment and complies with the \href{https://www.ecma-international.org/ecma-262/6.0/\#sec-object.assign}{\texttt{ spec}}. In an ES6 environment, it will also work properly with {\ttfamily Symbol}s.
+
+Most common usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ trimEnd\ =\ require('string.prototype.trimend');}
+\DoxyCodeLine{}
+\DoxyCodeLine{assert(trimEnd('\ \(\backslash\)t\(\backslash\)na\ \(\backslash\)t\(\backslash\)n')\ ===\ 'a\ \(\backslash\)t\(\backslash\)n');}
+\DoxyCodeLine{}
+\DoxyCodeLine{if\ (!String.prototype.trimEnd)\ \{}
+\DoxyCodeLine{\ \ \ \ trimEnd.shim();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{assert(trimEnd('\ \(\backslash\)t\(\backslash\)na\ \(\backslash\)t\(\backslash\)n\ ')\ ===\ '\ \(\backslash\)t\(\backslash\)na\ \(\backslash\)t\(\backslash\)n\ '.trimEnd());}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2string_8prototype_8trimend_2README_autotoc_md26706}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2string_8prototype_8trimend_2README_autotoc_md26706}
+Simply clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test} 

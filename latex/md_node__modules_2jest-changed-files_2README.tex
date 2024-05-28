@@ -1,0 +1,58 @@
+\chapter{jest-\/changed-\/files}
+\hypertarget{md_node__modules_2jest-changed-files_2README}{}\label{md_node__modules_2jest-changed-files_2README}\index{jest-\/changed-\/files@{jest-\/changed-\/files}}
+\label{md_node__modules_2jest-changed-files_2README_autotoc_md16681}%
+\Hypertarget{md_node__modules_2jest-changed-files_2README_autotoc_md16681}%
+ A module used internally by Jest to check which files have changed since you last committed in git or hg.\hypertarget{md_node__modules_2jest-changed-files_2README_autotoc_md16682}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2jest-changed-files_2README_autotoc_md16682}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ -\/-\/save\ jest-\/changed-\/files}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2jest-changed-files_2README_autotoc_md16683}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2jest-changed-files_2README_autotoc_md16683}
+\hypertarget{md_node__modules_2jest-changed-files_2README_autotoc_md16684}{}\doxysubsection{\texorpdfstring{$<$tt$>$get\+Changed\+Files\+For\+Roots(roots\+: $<$\+Array$<$string$>$$>$, options\+: ?object)\+: Promise$<$?object$>$$<$/tt$>$}{<tt>getChangedFilesForRoots(roots: <Array<string>>, options: ?object): Promise<?object></tt>}}\label{md_node__modules_2jest-changed-files_2README_autotoc_md16684}
+Get the list of files and repos that have changed since the last commit.\hypertarget{md_node__modules_2jest-changed-files_2README_autotoc_md16685}{}\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md_node__modules_2jest-changed-files_2README_autotoc_md16685}
+roots\+: Array of string paths gathered from \href{https://jestjs.io/docs/configuration\#roots-arraystring}{\texttt{ jest roots}}.
+
+options\+: Object literal with keys
+
+
+\begin{DoxyItemize}
+\item last\+Commit\+: boolean
+\item with\+Ancestor\+: boolean
+\end{DoxyItemize}\hypertarget{md_node__modules_2jest-changed-files_2README_autotoc_md16686}{}\doxysubsection{\texorpdfstring{find\+Repos(roots\+: $<$\+Array$<$string$>$$>$)\+: Promise$<$?object$>$}{findRepos(roots: <Array<string>>): Promise<?object>}}\label{md_node__modules_2jest-changed-files_2README_autotoc_md16686}
+Get a set of git and hg repositories.\hypertarget{md_node__modules_2jest-changed-files_2README_autotoc_md16687}{}\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{md_node__modules_2jest-changed-files_2README_autotoc_md16687}
+roots\+: Array of string paths gathered from \href{https://jestjs.io/docs/configuration\#roots-arraystring}{\texttt{ jest roots}}.\hypertarget{md_node__modules_2jest-changed-files_2README_autotoc_md16688}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2jest-changed-files_2README_autotoc_md16688}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{getChangedFilesForRoots\}\ from\ 'jest-\/changed-\/files';}
+\DoxyCodeLine{}
+\DoxyCodeLine{getChangedFilesForRoots(['/path/to/test'],\ \{}
+\DoxyCodeLine{\ \ lastCommit:\ true,}
+\DoxyCodeLine{\ \ withAncestor:\ true,}
+\DoxyCodeLine{\}).then(files\ =>\ \{}
+\DoxyCodeLine{\ \ /*}
+\DoxyCodeLine{\ \ \{}
+\DoxyCodeLine{\ \ \ \ repos:\ [],}
+\DoxyCodeLine{\ \ \ \ changedFiles:\ []}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ */}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{findRepos\}\ from\ 'jest-\/changed-\/files';}
+\DoxyCodeLine{}
+\DoxyCodeLine{findRepos(['/path/to/test']).then(repos\ =>\ \{}
+\DoxyCodeLine{\ \ /*}
+\DoxyCodeLine{\ \ \{}
+\DoxyCodeLine{\ \ \ \ git:\ Set<Path>,}
+\DoxyCodeLine{\ \ \ \ hg:\ Set<Path>}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ */}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+ 

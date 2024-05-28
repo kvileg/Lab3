@@ -1,0 +1,39 @@
+\chapter{Pascal Case}
+\hypertarget{md_node__modules_2pascal-case_2README}{}\label{md_node__modules_2pascal-case_2README}\index{Pascal Case@{Pascal Case}}
+\label{md_node__modules_2pascal-case_2README_autotoc_md20314}%
+\Hypertarget{md_node__modules_2pascal-case_2README_autotoc_md20314}%
+ \href{https://npmjs.org/package/pascal-case}{\texttt{ }} \href{https://npmjs.org/package/pascal-case}{\texttt{ }} \href{https://bundlephobia.com/result?p=pascal-case}{\texttt{ }}
+
+\begin{quote}
+Transform into a string of capitalized words without separators. \end{quote}
+\hypertarget{md_node__modules_2pascal-case_2README_autotoc_md20315}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2pascal-case_2README_autotoc_md20315}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ pascal-\/case\ -\/-\/save}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pascal-case_2README_autotoc_md20316}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2pascal-case_2README_autotoc_md20316}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ pascalCase\ \}\ from\ "{}pascal-\/case"{};}
+\DoxyCodeLine{}
+\DoxyCodeLine{pascalCase("{}string"{});\ //=>\ "{}String"{}}
+\DoxyCodeLine{pascalCase("{}dot.case"{});\ //=>\ "{}DotCase"{}}
+\DoxyCodeLine{pascalCase("{}PascalCase"{});\ //=>\ "{}PascalCase"{}}
+\DoxyCodeLine{pascalCase("{}version\ 1.2.10"{});\ //=>\ "{}Version\_1\_2\_10"{}}
+
+\end{DoxyCode}
+
+
+The function also accepts \href{https://github.com/blakeembrey/change-case\#options}{\texttt{ {\ttfamily options}}}.\hypertarget{md_node__modules_2pascal-case_2README_autotoc_md20317}{}\doxysubsection{\texorpdfstring{Merge Numbers}{Merge Numbers}}\label{md_node__modules_2pascal-case_2README_autotoc_md20317}
+If you\textquotesingle{}d like to remove the behavior prefixing {\ttfamily \+\_\+} before numbers, you can use {\ttfamily pascal\+Case\+Transform\+Merge}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ \{\ pascalCaseTransformMerge\ \}\ from\ "{}pascal-\/case"{};}
+\DoxyCodeLine{}
+\DoxyCodeLine{pascalCase("{}version\ 12"{},\ \{\ transform:\ pascalCaseTransformMerge\ \});\ //=>\ "{}Version12"{}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pascal-case_2README_autotoc_md20318}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2pascal-case_2README_autotoc_md20318}
+MIT 

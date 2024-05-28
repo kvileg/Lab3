@@ -1,0 +1,35 @@
+\chapter{\texorpdfstring{$<$}{<}a href="{}https\+://github.\+com/postcss/postcss"{} \texorpdfstring{$>$}{>}postcss\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}-\/minify-\/gradients}
+\hypertarget{md_node__modules_2postcss-minify-gradients_2README}{}\label{md_node__modules_2postcss-minify-gradients_2README}\index{$<$a href="{}https://github.com/postcss/postcss"{} $>$postcss$<$/a$>$-\/minify-\/gradients@{$<$a href=""https://github.com/postcss/postcss"" $>$postcss$<$/a$>$-\/minify-\/gradients}}
+\label{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21392}%
+\Hypertarget{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21392}%
+ \begin{quote}
+Minify gradient parameters with Post\+CSS. \end{quote}
+\hypertarget{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21393}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21393}
+With \href{https://npmjs.org/package/postcss-minify-gradients}{\texttt{ npm}} do\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ postcss-\/minify-\/gradients}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21394}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21394}
+Where possible, this module will minify gradient parameters. It can convert linear gradient directional syntax to angles, remove the unnecessary {\ttfamily 0\%} and {\ttfamily 100\%} start and end values, and minimise color stops that use the same length values (the browser will adjust the value automatically).\hypertarget{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21395}{}\doxysubsection{\texorpdfstring{Input}{Input}}\label{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21395}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{h1\ \{}
+\DoxyCodeLine{\ \ \ \ background:\ linear-\/gradient(to\ bottom,\ \#ffe500\ 0\%,\ \#ffe500\ 50\%,\ \#121\ 50\%,\ \#121\ 100\%)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21396}{}\doxysubsection{\texorpdfstring{Output}{Output}}\label{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21396}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{h1\ \{}
+\DoxyCodeLine{\ \ \ \ background:\ linear-\/gradient(180deg,\ \#ffe500,\ \#ffe500\ 50\%,\ \#121\ 0,\ \#121)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21397}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21397}
+See the \href{https://github.com/postcss/postcss\#usage}{\texttt{ Post\+CSS documentation}} for examples for your environment.\hypertarget{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21398}{}\doxysection{\texorpdfstring{Contributors}{Contributors}}\label{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21398}
+See \href{https://github.com/cssnano/cssnano/blob/master/CONTRIBUTORS.md}{\texttt{ CONTRIBUTORS.\+md}}.\hypertarget{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21399}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2postcss-minify-gradients_2README_autotoc_md21399}
+MIT © \href{http://beneb.info}{\texttt{ Ben Briggs}} 
