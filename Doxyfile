@@ -12,5 +12,7 @@ INPUT                  = src
 # Папка для генерации документации
 OUTPUT_DIRECTORY       = docs
 
-# Добавить файл README.md в документацию
-USE_MDFILE_AS_MAINPAGE = README.md
+
+
+# Расширения файлов, которые следует включить в процесс документации
+FILE_PATTERNS          = *.js *.css 
