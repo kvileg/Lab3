@@ -1,0 +1,16 @@
+# Doxyfile configuration
+
+# Имя проекта
+PROJECT_NAME           = "Мой проект"
+
+# Короткое описание проекта
+PROJECT_BRIEF          = "Описание моего проекта"
+
+# Путь к исходным файлам
+INPUT                  = src
+
+# Папка для генерации документации
+OUTPUT_DIRECTORY       = docs
+
+# Добавить файл README.md в документацию
+USE_MDFILE_AS_MAINPAGE = README.md
