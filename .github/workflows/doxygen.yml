@@ -29,6 +29,8 @@ jobs:
         path: './html/'
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v4    
+      uses: actions/deploy-pages@v4   
+      env:
+        ACTIONS_ID_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 
    
